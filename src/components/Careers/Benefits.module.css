@@ -1,0 +1,28 @@
+.section {
+  background: var(--bg-secondary);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: var(--space-7);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-5);
+}
+
+.card {
+  background: var(--card-bg);
+  padding: var(--space-5);
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.icon {
+  font-size: 36px;
+  color: var(--accent);
+  margin-bottom: var(--space-4);
+}

@@ -1,0 +1,54 @@
+.heading {
+  text-align: center;
+  margin-bottom: var(--space-7);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-6);
+}
+
+.card {
+  background: var(--card-bg);
+  padding: var(--space-5);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto var(--space-4);
+  border: 3px solid var(--accent);
+}
+
+.card h3 {
+  margin-bottom: var(--space-1);
+}
+
+.role {
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: var(--space-4);
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.social a {
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.social a:hover {
+  color: var(--accent);
+}

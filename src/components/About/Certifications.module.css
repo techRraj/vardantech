@@ -1,0 +1,28 @@
+.heading {
+  text-align: center;
+  margin-bottom: var(--space-7);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-5);
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--card-bg);
+  padding: var(--space-3) var(--space-5);
+  border-radius: 40px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  font-weight: 500;
+}
+
+.icon {
+  color: var(--accent);
+  font-size: 20px;
+}

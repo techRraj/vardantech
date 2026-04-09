@@ -1,0 +1,52 @@
+.sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+.widget {
+  background: var(--card-bg);
+  padding: var(--space-5);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  margin-bottom: var(--space-6);
+}
+
+.widget h3 {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-xl);
+}
+
+.widget ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.widget li a {
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+
+.widget li a:hover {
+  color: var(--accent);
+}
+
+.emailInput {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-primary);
+  margin: var(--space-4) 0;
+}
+
+.subscribeBtn {
+  width: 100%;
+  padding: var(--space-2);
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}

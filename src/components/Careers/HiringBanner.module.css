@@ -1,0 +1,39 @@
+.banner {
+  background: linear-gradient(135deg, var(--accent), #4f46e5);
+  color: white;
+  padding: var(--space-8) 0;
+  text-align: center;
+  border-bottom: 4px solid rgba(255,255,255,0.2);
+}
+
+.content h1 {
+  font-size: var(--text-5xl);
+  margin-bottom: var(--space-4);
+}
+
+.gradient {
+  background: linear-gradient(to right, #fff, #e0e7ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.content p {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-6);
+  opacity: 0.9;
+}
+
+.cta {
+  display: inline-block;
+  background: white;
+  color: var(--accent);
+  padding: var(--space-3) var(--space-6);
+  border-radius: 40px;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+}

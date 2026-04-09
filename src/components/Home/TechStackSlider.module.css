@@ -1,0 +1,39 @@
+.section {
+  padding: var(--space-7) 0;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: var(--space-6);
+  font-size: var(--text-3xl);
+}
+
+.marqueeWrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.marquee {
+  display: flex;
+  gap: var(--space-5);
+  width: max-content;
+}
+
+.techPill {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: var(--space-3) var(--space-5);
+  border-radius: 40px;
+  font-weight: 500;
+  box-shadow: var(--shadow);
+  white-space: nowrap;
+  transition: all 0.2s;
+  cursor: default;
+}
+
+.techPill:hover {
+  transform: scale(1.05);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-hover);
+}

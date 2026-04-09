@@ -1,0 +1,108 @@
+.heading {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: var(--space-2) var(--space-4);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.activeTab {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.carousel {
+  max-width: 600px;
+  width: 100%;
+}
+
+.reviewCard {
+  background: var(--card-bg);
+  padding: var(--space-6);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  cursor: grab;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: var(--space-4);
+}
+
+.comment {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-5);
+}
+
+.clientInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+}
+
+.verified {
+  margin-left: auto;
+  color: #10b981;
+  font-size: var(--text-sm);
+}
+
+.navBtn {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+}
+
+.activeDot {
+  background: var(--accent);
+}

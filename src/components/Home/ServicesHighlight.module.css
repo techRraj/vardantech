@@ -1,0 +1,55 @@
+.sectionTitle {
+  text-align: center;
+  margin-bottom: var(--space-7);
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.serviceCard {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: var(--space-6) var(--space-5);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--accent);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+.icon {
+  color: var(--accent);
+  margin-bottom: var(--space-4);
+}
+
+.serviceCard h3 {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-xl);
+}
+
+.serviceCard p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.learnMore {
+  color: var(--accent);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
