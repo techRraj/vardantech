@@ -10,13 +10,15 @@ const ContactInfo = () => {
       <div className={styles.card}>
         <h3>Get in Touch</h3>
         <div className={styles.infoItem}>
-          <FiPhone /> <span>+91 98765 43210</span>
+          <FiPhone /> <span>+91 8889710105</span>
         </div>
         <div className={styles.infoItem}>
-          <FiMail /> <span>hello@vardanainfotech.com</span>
+          <FiMail /> <span>Vardaantechhub.info@gmail.com</span>
         </div>
         <div className={styles.infoItem}>
-          <FiMapPin /> <span>123 Tech Park, Hitech City, Hyderabad, India</span>
+          <FiMapPin /> <span>Platinum Plaza
+PU-4, A.B. Road, Behind C-21 Mall 
+Indore, , Indore, India</span>
         </div>
         <div className={styles.infoItem}>
           <FiClock /> <span>Mon-Fri: 9:00 AM - 6:00 PM IST</span>

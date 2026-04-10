@@ -9,7 +9,7 @@ const BlogPage = () => {
     <>
       <Helmet>
         <title>Blog - AI & Software Development Insights</title>
-        <meta name="description" content="Read the latest articles on AI agents, chatbots, web development, and digital transformation from Vardana Infotech experts." />
+        <meta name="description" content="Read the latest articles on AI agents, chatbots, web development, and digital transformation from Vardaantechhub experts." />
       </Helmet>
       <section className="section">
         <div className={`container ${styles.container}`}>

@@ -8,8 +8,8 @@ const CareersPage = () => {
   return (
     <>
       <Helmet>
-        <title>Careers - Join Vardana Infotech</title>
-        <meta name="description" content="Explore exciting career opportunities at Vardana Infotech. Work on cutting-edge AI and software projects with a talented team." />
+        <title>Careers - Join Vardaantechhub</title>
+        <meta name="description" content="Explore exciting career opportunities at Vardaantechhub. Work on cutting-edge AI and software projects with a talented team." />
       </Helmet>
       <HiringBanner />
       <JobList />

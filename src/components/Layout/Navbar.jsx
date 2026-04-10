@@ -37,7 +37,7 @@ const Navbar = () => {
       <header className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
         <div className={`container ${styles.navContainer}`}>
           <Link to="/" className={styles.logo}>
-            <img src="/assets/logo.svg" alt="Vardana Infotech" width="160" height="40" />
+            <img src="/assets/logo.svg" alt="Vardaantech Hub" width="160" height="40" />
           </Link>
 
           <nav className={styles.desktopNav}>
@@ -54,9 +54,19 @@ const Navbar = () => {
 
           <div className={styles.actions}>
             <ThemeToggle />
-            <Button variant="primary" size="sm" className={styles.ctaBtn}>
-              Free Demo
-            </Button>
+         
+<Button 
+  variant="primary" 
+  size="sm" 
+  className={styles.ctaBtn}
+  onClick={() => {
+    const phone = '918889710105';
+    const message = encodeURIComponent("Hi Vardana Infotech, I'm interested in a free demo consultation.");
+    window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+  }}
+>
+  Free Demo
+</Button>
             <button
               className={styles.hamburger}
               onClick={() => setMobileOpen(true)}

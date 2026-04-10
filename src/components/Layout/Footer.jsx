@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container">
         <div className={styles.footerGrid}>
           <div className={styles.brand}>
-            <img src="/assets/logo.svg" alt="Vardana Infotech" className={styles.footerLogo} />
+            <img src="/assets/logo.svg" alt="Vardaantech Hub" className={styles.footerLogo} />
             <p>Building intelligent solutions for tomorrow's challenges.</p>
             <div className={styles.socials}>
               <a href="#"><FiInstagram /></a>
@@ -38,13 +38,15 @@ const Footer = () => {
           </div>
           <div className={styles.contactInfo}>
             <h4>Get in Touch</h4>
-            <p><FiMapPin /> 123 Tech Park, Silicon Valley, CA</p>
-            <p><FiMail /> hello@vardanainfotech.com</p>
-            <p><FiPhone /> +1 (555) 123-4567</p>
+            <p><FiMapPin />  
+4th Floor, Platinum Plaza
+PU-4, A.B. Road, Behind C-21 Mall </p>
+            <p><FiMail /> Vardaantechhub.info@gmail.com</p>
+            <p><FiPhone />91 8889710105</p>
           </div>
         </div>
         <div className={styles.bottom}>
-          <p>© {new Date().getFullYear()} Vardana Infotech Private Limited. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} RajkumarChourasiya. All rights reserved.</p>
         </div>
       </div>
     </footer>

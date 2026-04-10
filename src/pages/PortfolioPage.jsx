@@ -7,7 +7,7 @@ const PortfolioPage = () => {
     <>
       <Helmet>
         <title>Portfolio - Our Work & Case Studies</title>
-        <meta name="description" content="Explore Vardana Infotech's portfolio of AI, web, and mobile projects. See how we've helped businesses transform." />
+        <meta name="description" content="Explore Vardaantechhub portfolio of AI, web, and mobile projects. See how we've helped businesses transform." />
       </Helmet>
       <ProjectGrid />
     </>

@@ -1,3 +1,4 @@
+/* TechStackSlider.module.css */
 .section {
   padding: var(--space-7) 0;
 }
@@ -21,6 +22,8 @@
 }
 
 .techPill {
+  display: flex;
+  align-items: center;
   background-color: var(--card-bg);
   border: 1px solid var(--border);
   padding: var(--space-3) var(--space-5);
@@ -36,4 +39,21 @@
   transform: scale(1.05);
   border-color: var(--accent);
   box-shadow: var(--shadow-hover);
+}
+
+.techLogo {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  object-fit: contain;
+}
+
+/* Invert logos that are dark/black for dark mode visibility */
+[data-theme='dark'] .darkInvert {
+  filter: invert(1) brightness(2);
+}
+
+/* Keep colored logos vibrant in dark mode */
+[data-theme='dark'] .techLogo:not(.darkInvert) {
+  filter: brightness(1.1);
 }

@@ -15,7 +15,7 @@ const CompanyStory = () => {
           <span className={styles.label}>Our Story</span>
           <h1>Building Tomorrow's Technology, Today</h1>
           <p>
-            Founded in 2018, Vardana Infotech began with a simple mission: to make advanced AI and software development accessible to businesses of all sizes. 
+            Founded in 2018, Vardaantechhub began with a simple mission: to make advanced AI and software development accessible to businesses of all sizes. 
             What started as a two-person team has grown into a global technology partner trusted by startups and Fortune 500 companies alike.
           </p>
           <p>

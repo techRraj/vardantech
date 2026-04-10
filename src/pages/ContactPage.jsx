@@ -9,7 +9,7 @@ const ContactPage = () => {
     <>
       <Helmet>
         <title>Contact Us - Get a Free Demo Consultation</title>
-        <meta name="description" content="Reach out to Vardana Infotech for AI solutions, custom development, or a free consultation. We're here to help." />
+        <meta name="description" content="Reach out to Vardaantechhub for AI solutions, custom development, or a free consultation. We're here to help." />
       </Helmet>
       <section className="section">
         <div className={`container ${styles.container}`}>

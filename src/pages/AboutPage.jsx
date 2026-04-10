@@ -10,7 +10,7 @@ const AboutPage = () => {
   return (
     <>
       <Helmet>
-        <title>About Vardana Infotech - Our Story, Mission & Team</title>
+        <title>About Vardaantechhub - Our Story, Mission & Team</title>
         <meta name="description" content="Learn about Vardana Infotech's journey, mission, values, and meet the expert team behind our AI and software solutions." />
       </Helmet>
       <CompanyStory />
