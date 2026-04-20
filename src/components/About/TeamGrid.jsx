@@ -4,8 +4,8 @@ import { FiLinkedin, FiTwitter } from 'react-icons/fi';
 import styles from './TeamGrid.module.css';
 
 const team = [
-  { name: 'Vardan Sharma', role: 'Founder & CEO', img: 'https://randomuser.me/api/portraits/men/32.jpg' },
-  { name: 'Priya Mehta', role: 'CTO', img: 'https://randomuser.me/api/portraits/women/44.jpg' },
+  { name: 'Mr. Ravindra Singh Rajawat', role: 'Founder & CEO', img: 'https://randomuser.me/api/portraits/men/32.jpg' },
+  { name: 'Ms. Mini Chauhan', role: 'CTO', img: 'https://randomuser.me/api/portraits/women/44.jpg' },
   { name: 'Arjun Nair', role: 'Head of AI', img: 'https://randomuser.me/api/portraits/men/46.jpg' },
   { name: 'Sneha Kapoor', role: 'Product Lead', img: 'https://randomuser.me/api/portraits/women/63.jpg' },
   { name: 'Rahul Desai', role: 'Senior Architect', img: 'https://randomuser.me/api/portraits/men/75.jpg' },

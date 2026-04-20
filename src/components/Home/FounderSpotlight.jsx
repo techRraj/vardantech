@@ -21,11 +21,11 @@ const FounderSpotlight = () => {
         </motion.div>
         <div className={styles.content}>
           <span className={styles.label}>Founder & CEO</span>
-          <h2>Vardan Sharma</h2>
+          <h2>Mr. Ravindra Singh Rajawat</h2>
           <p className={styles.quote}>
             "Our mission is to democratize AI for businesses of all sizes. With over 15 years in tech, I've seen the transformative power of intelligent automation."
           </p>
-          <p className={styles.signature}>Vardan Sharma</p>
+          <p className={styles.signature}>Proprietor:</p>
           <a href="#" className={styles.linkedin} aria-label="LinkedIn">
             <FiLinkedin size={20} /> Connect on LinkedIn
           </a>

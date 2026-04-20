@@ -4,11 +4,11 @@ import ApplicationModal from './ApplicationModal';
 import styles from './JobList.module.css';
 
 const jobs = [
-  { id: 1, title: 'Senior AI Engineer', location: 'Remote / Bangalore', type: 'Full-time', department: 'AI' },
-  { id: 2, title: 'React.js Developer', location: 'Hyderabad', type: 'Full-time', department: 'Web' },
-  { id: 3, title: 'Product Manager', location: 'Remote', type: 'Full-time', department: 'Product' },
-  { id: 4, title: 'DevOps Engineer', location: 'Bangalore', type: 'Contract', department: 'Cloud' },
-  { id: 5, title: 'UX/UI Designer', location: 'Remote', type: 'Full-time', department: 'Design' },
+  { id: 1, title: 'Senior AI Engineer', location: 'Remote / Indore', type: 'Full-time', department: 'AI' ,job:'Intern'},
+  { id: 2, title: 'React.js Developer', location: 'Indore', type: 'Full-time', department: 'Web',job:'Intern' },
+  { id: 3, title: 'Product Manager', location: 'Remote', type: 'Full-time', department: 'Product',job:'Intern' },
+  { id: 4, title: 'DevOps Engineer', location: 'Indore', type: 'Contract', department: 'Cloud',job:'Intern' },
+  { id: 5, title: 'UX/UI Designer', location: 'Remote', type: 'Full-time', department: 'Design',job:'Intern' },
 ];
 
 const JobList = () => {
@@ -35,11 +35,13 @@ const JobList = () => {
               viewport={{ once: true }}
             >
               <div>
-                <h3>{job.title}</h3>
+                <h3>{job.title} </h3>
                 <div className={styles.meta}>
+                  
                   <span>{job.location}</span>
                   <span>•</span>
                   <span>{job.type}</span>
+                  <span>{job.job}</span>
                 </div>
               </div>
               <button className={styles.applyBtn} onClick={() => openModal(job)}>Apply</button>
