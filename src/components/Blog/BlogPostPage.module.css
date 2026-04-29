@@ -1,0 +1,281 @@
+/* -------------------------------
+   Blog Post Page – Enhanced CSS
+   (matches the Figma‑grade design)
+---------------------------------- */
+
+/* ---------- Page layout ---------- */
+.section {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-9);
+}
+
+/* ---------- Back link ---------- */
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-8);
+  transition: opacity 0.2s;
+}
+.backLink:hover {
+  opacity: 0.8;
+}
+
+/* ---------- Article wrapper ---------- */
+.article {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* ---------- Header (title, meta, share) ---------- */
+.header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.header h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--space-5);
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.meta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-6);
+}
+.meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/* ---------- Share buttons ---------- */
+.share {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.share a,
+.share button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 1.3rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.share button {
+  background: none;
+  border: 1px solid var(--border);
+}
+.share a:hover,
+.share button:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ---------- Content area (with TOC) ---------- */
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--space-8);
+  margin: var(--space-8) 0 var(--space-9) 0;
+}
+
+/* ---------- Table of Contents ---------- */
+.toc {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: var(--space-5);
+  box-shadow: var(--shadow);
+}
+
+.toc h4 {
+  font-size: var(--text-base);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+  color: var(--text-primary);
+}
+
+.toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc li {
+  margin-bottom: var(--space-2);
+}
+
+.toc a {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: block;
+  padding: var(--space-1) 0;
+}
+.toc a:hover {
+  color: var(--accent);
+}
+
+/* ---------- Article body ---------- */
+.body {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.body h2 {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin: var(--space-7) 0 var(--space-4);
+  color: var(--text-primary);
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid var(--border);
+}
+
+.body p {
+  margin-bottom: var(--space-5);
+}
+
+.body strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Author card ---------- */
+.authorCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: var(--space-5) var(--space-6);
+  margin: var(--space-8) 0;
+  box-shadow: var(--shadow);
+}
+
+.authorCard img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+}
+
+.authorCard div p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.authorCard div strong {
+  font-size: var(--text-base);
+  color: var(--text-primary);
+}
+
+/* ---------- Related posts ---------- */
+.related {
+  margin-top: var(--space-8);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border);
+}
+
+.related h3 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-6);
+  color: var(--text-primary);
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-5);
+}
+
+.relatedCard {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+
+.relatedCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.relatedCard img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.relatedCard h4 {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* ---------- Responsive adjustments ---------- */
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .toc {
+    display: none;               /* hide TOC on smaller screens for cleanliness */
+  }
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: var(--text-3xl);
+  }
+  .body {
+    font-size: var(--text-base);
+  }
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+}

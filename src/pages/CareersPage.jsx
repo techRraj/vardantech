@@ -3,10 +3,11 @@ import { Helmet } from 'react-helmet-async';
 import HiringBanner from '../components/Careers/HiringBanner';
 import JobList from '../components/Careers/JobList';
 import Benefits from '../components/Careers/Benefits';
-
+import Breadcrumbs from '../components/Layout/Breadcrumbs';
 const CareersPage = () => {
   return (
     <>
+    <Breadcrumbs />
       <Helmet>
         <title>Careers - Join Vardaantechhub</title>
         <meta name="description" content="Explore exciting career opportunities at Vardaantechhub. Work on cutting-edge AI and software projects with a talented team." />

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiInstagram, FiLinkedin, FiTwitter, FiFacebook, FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
 import styles from './Footer.module.css';
+// import Referral from '../../pages/Referral';
 
 const Footer = () => {
   return (
@@ -33,7 +34,10 @@ const Footer = () => {
               <li><Link to="/blog">Blog</Link></li>
               <li><Link to="/careers">Careers</Link></li>
               <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/referral">Referral Programme</Link></li>
+
               <li><a href="#">Privacy Policy</a></li>
+
             </ul>
           </div>
           <div className={styles.contactInfo}>

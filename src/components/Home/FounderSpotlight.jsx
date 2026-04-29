@@ -12,11 +12,11 @@ const FounderSpotlight = () => {
           whileHover={{ scale: 1.02 }}
           transition={{ type: 'tween' }}
         >
-          <img
+          {/* <img
             src="https://via.placeholder.com/400x400?text=Founder"
             alt="Founder"
             className={styles.image}
-          />
+          /> */}
           <div className={styles.parallaxOverlay} />
         </motion.div>
         <div className={styles.content}>

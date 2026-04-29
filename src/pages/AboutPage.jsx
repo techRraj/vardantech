@@ -5,11 +5,14 @@ import MissionVision from '../components/About/MissionVision';
 import TeamGrid from '../components/About/TeamGrid';
 import Milestones from '../components/About/Milestones';
 import Certifications from '../components/About/Certifications';
-
+import Breadcrumbs from '../components/Layout/Breadcrumbs';
 const AboutPage = () => {
   return (
     <>
+    <Breadcrumbs />
+    
       <Helmet>
+        
         <title>About Vardaantechhub - Our Story, Mission & Team</title>
         <meta name="description" content="Learn about Vardana Infotech's journey, mission, values, and meet the expert team behind our AI and software solutions." />
       </Helmet>

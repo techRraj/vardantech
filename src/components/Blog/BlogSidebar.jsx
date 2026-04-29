@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './BlogSidebar.module.css';
 
 const categories = ['AI (12)', 'Web Development (8)', 'Mobile (5)', 'Marketing (6)', 'DevOps (3)'];
 const popularPosts = [
-  'The Rise of AI Agents',
-  'Building Scalable Chatbots',
-  'Why React is Still King',
-  'Vector Databases Explained',
+  { title: 'The Rise of AI Agents', id: 1 },
+  { title: 'Building Scalable Chatbots', id: 2 },
+  { title: 'Why React is Still King', id: 3 },
+  { title: 'Vector Databases Explained', id: 6 },
 ];
 
 const BlogSidebar = () => {
@@ -21,7 +22,11 @@ const BlogSidebar = () => {
       <div className={styles.widget}>
         <h3>Popular Posts</h3>
         <ul>
-          {popularPosts.map(post => <li key={post}><a href="#">{post}</a></li>)}
+          {popularPosts.map(post => (
+            <li key={post.id}>
+              <Link to={`/blog/${post.id}`}>{post.title}</Link>
+            </li>
+          ))}
         </ul>
       </div>
       <div className={styles.widget}>

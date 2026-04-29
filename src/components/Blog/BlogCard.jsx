@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './BlogCard.module.css';
 
-const BlogCard = ({ post }) => {
+const BlogCard = ({ post, onClick }) => {
   return (
     <motion.article
       className={styles.card}
@@ -10,6 +10,11 @@ const BlogCard = ({ post }) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
+      style={{ cursor: 'pointer' }}
+      onKeyPress={(e) => e.key === 'Enter' && onClick()}
     >
       <img src={post.image} alt={post.title} className={styles.image} />
       <div className={styles.content}>

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './ProjectCard.module.css';
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, onClick }) => {
   return (
     <motion.div
       layout
@@ -11,20 +11,28 @@ const ProjectCard = ({ project }) => {
       exit={{ opacity: 0, scale: 0.9 }}
       className={styles.card}
       whileHover={{ y: -8 }}
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
+      onKeyPress={(e) => e.key === 'Enter' && onClick()}
     >
       <div className={styles.imageWrapper}>
         <img src={project.img} alt={project.title} />
         <div className={styles.overlay}>
-          <button className={styles.caseStudyBtn}>View Case Study</button>
+          <span className={styles.caseStudyBtn}>View Case Study</span>
         </div>
       </div>
       <div className={styles.content}>
         <h3>{project.title}</h3>
         <p className={styles.client}>{project.client}</p>
         <div className={styles.tags}>
-          {project.tech.map(t => <span key={t}>{t}</span>)}
+          {project.tech.map((t, idx) => (
+            <span key={idx}>{t}</span>
+          ))}
         </div>
-        <p className={styles.outcome}><strong>Outcome:</strong> {project.outcome}</p>
+        <p className={styles.outcome}>
+          <strong>Outcome:</strong> {project.outcome}
+        </p>
       </div>
     </motion.div>
   );
