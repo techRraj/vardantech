@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import Button from '../UI/Button';
 import styles from './Hero.module.css';
-import aiImage from '../../assets/ai.png';   // <-- import from src/assets
-
+import aiImage from '../../assets/ai.png';   // <-- import from src/
 const Hero = () => {
   const navigate = useNavigate();
 
@@ -19,10 +18,29 @@ const Hero = () => {
         >
           <h1 className={styles.title}>
             Build Intelligent{' '}
-            <span className={styles.gradient}>AI Agents</span> & Custom Chatbots
+            <span className={styles.highlightWrapper}>
+              <span className={styles.gradient}>AI Agents</span>
+              <motion.span
+                className={styles.underline}
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: [0, 1, 0] }}
+                transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
+              />
+            </span>{' '}
+            &{' '}
+            <span className={styles.highlightWrapper}>
+              <span className={styles.gradient}>Custom Chatbots</span>
+              <motion.span
+                className={styles.underline}
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: [0, 1, 0] }}
+                transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut', delay: 0.5 }}
+              />
+            </span>
           </h1>
           <p className={styles.subtitle}>
-            Vardaantechhub delivers enterprise-grade AI solutions, web & mobile apps, and digital transformation services. Get a free demo consultation today.
+            Vardaantechhub delivers enterprise‑grade AI solutions, web & mobile apps, and digital
+            transformation services. Get a free demo consultation today.
           </p>
           <div className={styles.ctaGroup}>
             <Button
@@ -30,17 +48,15 @@ const Hero = () => {
               size="lg"
               onClick={() => {
                 const phone = '918889710105';
-                const message = encodeURIComponent("Hi Vardana Infotech, I'd like to schedule a free demo consultation.");
+                const message = encodeURIComponent(
+                  "Hi Vardana Infotech, I'd like to schedule a free demo consultation."
+                );
                 window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
               }}
             >
               Free Demo Consultancy
             </Button>
-            <Button
-              variant="secondary"
-              size="lg"
-              onClick={() => navigate('/services')}
-            >
+            <Button variant="secondary" size="lg" onClick={() => navigate('/services')}>
               View Services
             </Button>
           </div>

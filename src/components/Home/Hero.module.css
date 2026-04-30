@@ -66,3 +66,23 @@
   height: auto;
   display: block; /* ensures no extra space below */
 }
+/* existing styles … */
+
+/* Highlight wrapper for underline positioning */
+.highlightWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Animated underline */
+.underline {
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), hsl(62, 90%, 66%), var(--accent));
+  border-radius: 2px;
+  transform-origin: left center;
+  box-shadow: 0 0 10px rgba(246, 220, 92, 0.787);
+}

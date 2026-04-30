@@ -1,4 +1,7 @@
 import React, { lazy, Suspense } from 'react';
+import { useState, useEffect } from 'react';
+import SpecialOfferPopup from './components/UI/SpecialOfferPopup';
+import OfferTab from './components/UI/OfferTab';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './components/Layout/Navbar';
@@ -7,6 +10,7 @@ import WhatsAppButton from './components/UI/WhatsAppButton';
 import ScrollProgress from './components/Layout/ScrollProgress';
 import './App.module.css';
 import Referral from './pages/Referral';
+import Loader from './components/UI/Loader';
 
 // Lazy load pages for performance
 const HomePage = lazy(() => import('./pages/HomePage'));
@@ -30,7 +34,7 @@ const AnimatedRoutes = () => {
   const location = useLocation();
   return (
     <AnimatePresence mode="wait">
-      <Suspense fallback={<div className="loader">Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit"><HomePage /></motion.div>} />
 <Route path="/free-ai-audit" element={<motion.div ><FreeAudit /></motion.div>} />
@@ -55,6 +59,33 @@ const AnimatedRoutes = () => {
 };
 
 function App() {
+
+   const [showOffer, setShowOffer] = useState(false);
+  const [popupDismissed, setPopupDismissed] = useState(false);
+
+  // Check session storage for whether popup was already shown/closed
+  useEffect(() => {
+    const dismissed = sessionStorage.getItem('offerPopupDismissed');
+    if (!dismissed) {
+      // Show popup after a short delay to ensure everything is loaded
+      const timeout = setTimeout(() => setShowOffer(true), 2000);
+      return () => clearTimeout(timeout);
+    } else {
+      setPopupDismissed(true);
+    }
+  }, []);
+
+  const handleCloseOffer = () => {
+    setShowOffer(false);
+    sessionStorage.setItem('offerPopupDismissed', 'true');
+    setPopupDismissed(true);
+  };
+
+  const handleReopenOffer = () => {
+    setShowOffer(true);
+    // Optionally clear the dismissed flag so it can appear again on next visit if needed
+    // sessionStorage.removeItem('offerPopupDismissed');
+  };
   return (
     <BrowserRouter>
       <ScrollProgress />
@@ -64,6 +95,8 @@ function App() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <OfferTab onClick={handleReopenOffer} />
+      <SpecialOfferPopup isOpen={showOffer} onClose={handleCloseOffer} />
     </BrowserRouter>
   );
 }

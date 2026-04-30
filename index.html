@@ -56,5 +56,16 @@
   gtag('js', new Date());
   gtag('config', 'AW-XXXXXXXXXX'); // Replace with your Google Ads ID
 </script>
+<script>
+  document.addEventListener('click', function(e) {
+    const ripple = document.createElement('div');
+    ripple.className = 'global-ripple';
+    ripple.style.left = e.clientX - 10 + 'px';
+    ripple.style.top = e.clientY - 10 + 'px';
+    document.body.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 600);
+  });
+</script>
+
   </body>
 </html>
