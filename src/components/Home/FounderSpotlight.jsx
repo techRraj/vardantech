@@ -21,7 +21,7 @@ const FounderSpotlight = () => {
         </motion.div>
         <div className={styles.content}>
           <span className={styles.label}>Founder & CEO</span>
-          <h2>Mr. Ravindra Singh Rajawat</h2>
+          <h2>Mrs MINI CHAUHAN</h2>
           <p className={styles.quote}>
             "Our mission is to democratize AI for businesses of all sizes. With over 15 years in tech, I've seen the transformative power of intelligent automation."
           </p>

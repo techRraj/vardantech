@@ -8,7 +8,7 @@ const blogPosts = [
     readTime: '5 min',
     category: 'AI',
     image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600',
-    author: { name: 'Mr. Ravindra Singh Rajawat', avatar: 'https://randomuser.me/api/portraits/men/32.jpg' },
+    author: { name: 'Mrs. MINI CHAUHAN', avatar: 'https://randomuser.me/api/portraits/men/32.jpg' },
     content: `
 ## What Are AI Agents?
 
