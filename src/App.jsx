@@ -11,7 +11,7 @@ import ScrollProgress from './components/Layout/ScrollProgress';
 import './App.module.css';
 import Referral from './pages/Referral';
 import Loader from './components/UI/Loader';
-
+import MovingBackground from './components/UI/MovingBackground';
 // Lazy load pages for performance
 const HomePage = lazy(() => import('./pages/HomePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
@@ -88,6 +88,7 @@ function App() {
   };
   return (
     <BrowserRouter>
+    <MovingBackground />
       <ScrollProgress />
       <Navbar />
       <main style={{ minHeight: '80vh' }}>

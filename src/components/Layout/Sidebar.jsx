@@ -21,7 +21,7 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
       exit="exit"
     >
       <div className={styles.sidebarHeader}>
-        <img src="/assets/logo.svg" alt="Vardana" className={styles.sidebarLogo} />
+        <img src="/assets/logo3.png"  alt="Vardana" className={styles.sidebarLogo} />
         <button onClick={onClose} className={styles.closeBtn} aria-label="Close menu">
           <FiX size={28} />
         </button>

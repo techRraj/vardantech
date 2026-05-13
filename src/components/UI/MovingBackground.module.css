@@ -1,0 +1,70 @@
+/* ---------- Light mode ---------- */
+.lightBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: var(--bg-primary);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.lightOrb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.7;
+  will-change: transform;
+}
+
+.lightWash {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(245,243,255,0.2) 100%);
+  mix-blend-mode: overlay;
+}
+
+/* ---------- Dark mode ---------- */
+.darkBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: var(--bg-primary);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.neuralSvg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.neuralNode {
+  fill: var(--accent);
+  filter: drop-shadow(0 0 6px var(--accent));
+  animation: nodePulse 3s ease-in-out infinite alternate;
+}
+
+.neuralLine {
+  stroke: var(--accent);
+  stroke-width: 0.5;
+  opacity: 0.15;
+  animation: lineFade 5s ease-in-out infinite alternate;
+}
+
+/* Keyframes */
+@keyframes nodePulse {
+  0% { r: 3; opacity: 0.5; }
+  100% { r: 6; opacity: 0.9; }
+}
+
+@keyframes lineFade {
+  0% { opacity: 0.05; }
+  100% { opacity: 0.25; }
+}
