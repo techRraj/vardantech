@@ -2,14 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiLinkedin, FiTwitter } from 'react-icons/fi';
 import styles from './TeamGrid.module.css';
+// import ceomamImg from "../../assets/ceomam.png";
+import ceomamImg from '../../assets/ceomam.png';
+import anajana from '../../assets/anjana itwari2.jpg'
+import raj from '../../assets/profileraj.png'
 
 const team = [
-  { name: 'Mr. Ravindra Singh Rajawat', role: 'Founder & CEO', img: 'https://randomuser.me/api/portraits/men/32.jpg' },
-  { name: 'Ms. Mini Chauhan', role: 'CTO', img: 'https://randomuser.me/api/portraits/women/44.jpg' },
-  { name: 'Arjun Nair', role: 'Head of AI', img: 'https://randomuser.me/api/portraits/men/46.jpg' },
-  { name: 'Sneha Kapoor', role: 'Product Lead', img: 'https://randomuser.me/api/portraits/women/63.jpg' },
-  { name: 'Rahul Desai', role: 'Senior Architect', img: 'https://randomuser.me/api/portraits/men/75.jpg' },
-  { name: 'Anjali Singh', role: 'UX Director', img: 'https://randomuser.me/api/portraits/women/28.jpg' },
+  { name: 'Mrs .Mini Chauhan ', role: 'Founder & CEO', img:ceomamImg  },
+  { name: 'Ms.Ravindra singh rajawat ', role: 'CTO', img: 'https://randomuser.me/api/portraits/women/44.jpg' },
+  { name: 'Rajkumar Chourasiya', role: 'Head of AI', img:raj },
+  { name: 'Anjana tiwari', role: 'Product Lead', img:anajana },
+  { name: 'Aman Raut', role: 'Senior Architect', img: 'https://randomuser.me/api/portraits/men/75.jpg' },
+  { name: 'Ranjana Karma', role: 'UX Director', img: 'https://randomuser.me/api/portraits/women/28.jpg' },
 ];
 
 const TeamGrid = () => {

@@ -19,7 +19,8 @@
 
 .filterBtn:hover {
   border-color: var(--accent);
-  color: var(--accent);
+  color: rgb(70, 70, 217);
+   border-color: var(--accent);
 }
 
 .active {

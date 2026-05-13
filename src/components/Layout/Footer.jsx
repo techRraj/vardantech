@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container">
         <div className={styles.footerGrid}>
           <div className={styles.brand}>
-            <img src="/assets/logo.svg" alt="Vardaantech Hub" className={styles.footerLogo} />
+            <img src="/assets/logo3.png" alt="Vardaantech Hub" className={styles.footerLogo} />
             <p>Building intelligent solutions for tomorrow's challenges.</p>
             <div className={styles.socials}>
               <a href="#"><FiInstagram /></a>

@@ -37,7 +37,7 @@ const Navbar = () => {
       <header className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
         <div className={`container ${styles.navContainer}`}>
           <Link to="/" className={styles.logo}>
-            <img src="/assets/logo.svg" alt="Vardaantech Hub" width="160" height="40" />
+            <img src="/assets/logo3.png" alt="Vardaantech Hub" width="160" height="40" />
           </Link>
 
           <nav className={styles.desktopNav}>

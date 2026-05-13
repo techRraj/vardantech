@@ -1,3 +1,4 @@
+import anjanaavtar from "../assets/anjana itwari2.jpg";
 const blogPosts = [
   {
     id: 1,
@@ -8,7 +9,7 @@ const blogPosts = [
     readTime: '5 min',
     category: 'AI',
     image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600',
-    author: { name: 'Mrs. MINI CHAUHAN', avatar: 'https://randomuser.me/api/portraits/men/32.jpg' },
+    author: { name: 'Mrs. ANAJANA TIWARI',avatar: anjanaavtar  },
     content: `
 ## What Are AI Agents?
 
