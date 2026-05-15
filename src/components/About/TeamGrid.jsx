@@ -9,7 +9,7 @@ import raj from '../../assets/profileraj.png'
 
 const team = [
   { name: 'Mrs .Mini Chauhan ', role: 'Founder & CEO', img:ceomamImg  },
-  { name: 'Ms.Ravindra singh rajawat ', role: 'CTO', img: 'https://randomuser.me/api/portraits/women/44.jpg' },
+  // { name: 'Ms.Ravindra singh rajawat ', role: 'CTO', img: 'https://randomuser.me/api/portraits/women/44.jpg' },
   { name: 'Rajkumar Chourasiya', role: 'Head of AI', img:raj },
   { name: 'Anjana tiwari', role: 'Product Lead', img:anajana },
   { name: 'Aman Raut', role: 'Senior Architect', img: 'https://randomuser.me/api/portraits/men/75.jpg' },
