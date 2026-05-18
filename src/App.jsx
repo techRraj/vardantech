@@ -22,6 +22,7 @@ const CareersPage = lazy(() => import('./pages/CareersPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const BlogPostPage = lazy(() => import('./components/Blog/BlogPostPage'));
 const FreeAudit = lazy(() => import('./pages/FreeAudit'));
+const PrivacyPage =lazy(()=> import('./pages/PrivacyPage'));
 
 // Page transition variants
 const pageVariants = {
@@ -52,6 +53,11 @@ const AnimatedRoutes = () => {
           <Route path="/careers" element={<motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit"><CareersPage /></motion.div>} />
           <Route path="/contact" element={<motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit"><ContactPage /></motion.div>} />
  <Route path="/referral" element={<motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit"><Referral /></motion.div>} />
+ <Route path="/privacy" element={
+  <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
+    <PrivacyPage />
+  </motion.div>
+} />
         </Routes>
       </Suspense>
     </AnimatePresence>

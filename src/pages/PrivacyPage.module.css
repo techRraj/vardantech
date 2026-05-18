@@ -1,0 +1,38 @@
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.content h1 {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--space-7);
+}
+
+.content h2 {
+  font-size: var(--text-2xl);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
+  color: var(--accent);
+}
+
+.content p,
+.content li {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.content ul {
+  padding-left: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
+.content a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.address {
+  font-style: normal;
+  line-height: 1.8;
+}

@@ -13,7 +13,7 @@ const FounderSpotlight = () => {
           transition={{ type: 'tween' }}
         >
           <img
-            src="/src/assets/ceomam.png"
+            src="/src/assets/ceo_mam.jpg"
             alt="Founder"
             className={styles.image}
           />
@@ -21,7 +21,7 @@ const FounderSpotlight = () => {
         </motion.div>
         <div className={styles.content}>
           <span className={styles.label}>Founder & CEO</span>
-          <h2>Mrs MINI CHAUHAN</h2>
+          <h2>Mrs. MINI CHAUHAN</h2>
           <p className={styles.quote}>
             "Our mission is to democratize AI for businesses of all sizes. With over 15 years in tech, I've seen the transformative power of intelligent automation."
           </p>

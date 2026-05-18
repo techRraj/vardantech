@@ -4,11 +4,13 @@ import ApplicationModal from './ApplicationModal';
 import styles from './JobList.module.css';
 
 const jobs = [
-  { id: 1, title: 'Senior AI Engineer', location: 'Remote / Indore', type: 'Full-time', department: 'AI' ,job:'Intern'},
+  { id: 1, title: 'AI Engineer', location: 'Remote / Indore', type: 'Full-time', department: 'AI' ,job:'Intern'},
   { id: 2, title: 'React.js Developer', location: 'Indore', type: 'Full-time', department: 'Web',job:'Intern' },
   { id: 3, title: 'Product Manager', location: 'Remote', type: 'Full-time', department: 'Product',job:'Intern' },
   { id: 4, title: 'DevOps Engineer', location: 'Indore', type: 'Contract', department: 'Cloud',job:'Intern' },
   { id: 5, title: 'UX/UI Designer', location: 'Remote', type: 'Full-time', department: 'Design',job:'Intern' },
+  { id: 6, title: 'senior Mern stack devloper', location: 'indore', type: 'Full-time', department: 'Design' },
+
 ];
 
 const JobList = () => {

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import CompanyStory from '../components/About/CompanyStory';
 import MissionVision from '../components/About/MissionVision';
 import TeamGrid from '../components/About/TeamGrid';
-import Milestones from '../components/About/Milestones';
+// import Milestones from '../components/About/Milestones';
 import Certifications from '../components/About/Certifications';
 import Breadcrumbs from '../components/Layout/Breadcrumbs';
 const AboutPage = () => {
@@ -19,7 +19,7 @@ const AboutPage = () => {
       <CompanyStory />
       <MissionVision />
       <TeamGrid />
-      <Milestones />
+      {/* <Milestones /> */}
       <Certifications />
     </>
   );

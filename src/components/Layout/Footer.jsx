@@ -36,7 +36,8 @@ const Footer = () => {
               <li><Link to="/contact">Contact</Link></li>
               <li><Link to="/referral">Referral Programme</Link></li>
 
-              <li><a href="#">Privacy Policy</a></li>
+
+              <li><Link to="/privacy">Privacy Policy</Link></li>
 
             </ul>
           </div>
@@ -50,7 +51,7 @@ PU-4, A.B. Road, Behind C-21 Mall </p>
           </div>
         </div>
         <div className={styles.bottom}>
-          <p>© {new Date().getFullYear()} RajkumarChourasiya. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Vardaantechhub. All rights reserved.</p>
         </div>
       </div>
     </footer>

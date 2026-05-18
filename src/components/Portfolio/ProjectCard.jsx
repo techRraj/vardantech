@@ -8,7 +8,7 @@ const ProjectCard = ({ project, onClick }) => {
       layout
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.9 }}
+      exit={{ opacity: 0, scale: 0.8 }}
       className={styles.card}
       whileHover={{ y: -8 }}
       onClick={onClick}

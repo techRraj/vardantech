@@ -6,14 +6,16 @@ import styles from './TeamGrid.module.css';
 import ceomamImg from '../../assets/ceomam.png';
 import anajana from '../../assets/anjana itwari2.jpg'
 import raj from '../../assets/profileraj.png'
-
+import ranjna from '../../assets/ranjanmam.jpeg'
+import aman from '../../assets/aman.png'
 const team = [
-  { name: 'Mrs .Mini Chauhan ', role: 'Founder & CEO', img:ceomamImg  },
+  { name: 'Mrs. Mini Chauhan ', role: 'Founder & CEO', img:ceomamImg  },
   // { name: 'Ms.Ravindra singh rajawat ', role: 'CTO', img: 'https://randomuser.me/api/portraits/women/44.jpg' },
   { name: 'Rajkumar Chourasiya', role: 'Head of AI', img:raj },
-  { name: 'Anjana tiwari', role: 'Product Lead', img:anajana },
-  { name: 'Aman Raut', role: 'Senior Architect', img: 'https://randomuser.me/api/portraits/men/75.jpg' },
-  { name: 'Ranjana Karma', role: 'UX Director', img: 'https://randomuser.me/api/portraits/women/28.jpg' },
+  { name: 'Anjana Tiwari', role: 'Product Lead', img:anajana },
+  { name: 'Aman Raut', role: 'Senior Architect', img:aman },
+  { name: 'Ranjana Karma', role: 'UX Director', img: ranjna },
+  
 ];
 
 const TeamGrid = () => {
