@@ -9,13 +9,14 @@ const Loader = () => (
     exit={{ opacity: 0 }}
   >
     <motion.img
-      src="/assets/logo.svg"
-      alt="Vardana Infotech"
+      // src="/assets/logo.png"
+      src='/src/assets/logo3.png'
+      alt="VardaanTechHub"
       className={styles.logo}
       animate={{ scale: [1, 1.05, 1], rotate: [0, 5, -5, 0] }}
       transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
     />
-    <motion.div className={styles.spinner} />
+    {/* <motion.div className={styles.spinner} /> */}
   </motion.div>
 );
 

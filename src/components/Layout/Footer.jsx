@@ -47,7 +47,7 @@ const Footer = () => {
 4th Floor, Platinum Plaza
 PU-4, A.B. Road, Behind C-21 Mall </p>
             <p><FiMail /> Vardaantechhub.info@gmail.com</p>
-            <p><FiPhone />91 8889710105</p>
+            <p><FiPhone />+91 8889710105</p>
           </div>
         </div>
         <div className={styles.bottom}>
