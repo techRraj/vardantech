@@ -27,9 +27,9 @@ const FounderSpotlight = () => {
             "Our mission is to democratize AI for businesses of all sizes. With over 15 years in tech, I've seen the transformative power of intelligent automation."
           </p>
           <p className={styles.signature}>Proprietor:</p>
-          <a href="#" className={styles.linkedin} aria-label="LinkedIn">
+          {/* <a href="https://www.linkedin.com/in/mini-chouhan/" className={styles.linkedin} aria-label="LinkedIn">
             <FiLinkedin size={20} /> Connect on LinkedIn
-          </a>
+          </a> */}
         </div>
       </div>
     </section>
