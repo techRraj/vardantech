@@ -6,7 +6,7 @@ import styles from './FreeDemoBanner.module.css';
 const FreeDemoBanner = () => {
   const handleFreeDemo = () => {
     const phone = '918889710105';
-    const message = encodeURIComponent("Hi Vardaantech Hub, I'm interested in a free demo. Please share more details.");
+    const message = encodeURIComponent("Hi Vardaan tech Hub, I'm interested in a free demo. Please share more details.");
     window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
   };
 

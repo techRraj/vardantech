@@ -12,6 +12,7 @@ import './App.module.css';
 import Referral from './pages/Referral';
 import Loader from './components/UI/Loader';
 import MovingBackground from './components/UI/MovingBackground';
+import { Analytics } from "@vercel/analytics/next"
 // Lazy load pages for performance
 const HomePage = lazy(() => import('./pages/HomePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
@@ -104,6 +105,7 @@ function App() {
       <WhatsAppButton />
       <OfferTab onClick={handleReopenOffer} />
       <SpecialOfferPopup isOpen={showOffer} onClose={handleCloseOffer} />
+       <Analytics />
     </BrowserRouter>
   );
 }

@@ -9,7 +9,7 @@ const Counter = ({ from, to }) => {
   const rounded = useTransform(count, latest => Math.round(latest));
 
   useEffect(() => {
-    const controls = animate(count, to, { duration: 2 });
+    const controls = animate(count, to, { duration: 3 });
     return controls.stop;
   }, []);
 

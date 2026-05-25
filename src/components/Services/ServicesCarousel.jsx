@@ -4,20 +4,24 @@ import ServiceCard from './ServiceCard';
 import ServiceFilters from './ServiceFilters';
 import styles from './ServicesCarousel.module.css';
 
+// ✅ Import icons from react-icons
+import { FaRobot, FaComments, FaCode, FaMobileAlt, FaBrain, FaPaintBrush, FaBullhorn, FaTasks, FaPencilRuler, FaDatabase, FaCogs, FaCloud } from "react-icons/fa";
+
 const allServices = [
-  { id: 1, category: 'ai', icon: '🤖', title: 'AI Agent Development', desc: 'Autonomous agents for workflow automation.', trending: true },
-  { id: 2, category: 'ai', icon: '💬', title: 'Custom Chatbot', desc: 'RAG-powered conversational AI.', trending: true },
-  { id: 3, category: 'web', icon: '🌐', title: 'Web Development', desc: 'Responsive, scalable web applications.' },
-  { id: 4, category: 'mobile', icon: '📱', title: 'Mobile Apps', desc: 'Native iOS & Android development.' },
-  { id: 5, category: 'ai', icon: '🧠', title: 'AI/ML Solutions', desc: 'Custom machine learning models.' },
-  { id: 6, category: 'web', icon: '🎨', title: 'Web Design', desc: 'UI/UX with Figma-grade precision.' },
-  { id: 7, category: 'marketing', icon: '📈', title: 'Digital Marketing', desc: 'SEO, SEM, social media.' },
-  { id: 8, category: 'other', icon: '📦', title: 'Product Management', desc: 'End-to-end product lifecycle.' },
-  { id: 9, category: 'other', icon: '✏️', title: 'Graphic Design', desc: 'Branding and visual identity.' },
-  { id: 10, category: 'ai', icon: '🔍', title: 'Vector DB Integration', desc: 'Pinecone, Weaviate, Qdrant.' },
-  { id: 11, category: 'ai', icon: '🧩', title: 'OpenAI/LLM Apps', desc: 'GPT-4, Claude, custom LLMs.' },
-  { id: 12, category: 'other', icon: '☁️', title: 'Cloud & DevOps', desc: 'AWS, Docker, Kubernetes.' },
+  { id: 1, category: 'ai', icon: <FaRobot color="#6366F1" size={40} />, title: 'AI Agent Development', desc: 'Autonomous agents for workflow automation.', trending: true },
+  { id: 2, category: 'ai', icon: <FaComments color="#10B981" size={40} />, title: 'Custom Chatbot', desc: 'RAG-powered conversational AI.', trending: true },
+  { id: 3, category: 'web', icon: <FaCode color="#F59E0B" size={40} />, title: 'Web Development', desc: 'Responsive, scalable web applications.' },
+  { id: 4, category: 'mobile', icon: <FaMobileAlt color="#3B82F6" size={40} />, title: 'Mobile Apps', desc: 'Native iOS & Android development.' },
+  { id: 5, category: 'ai', icon: <FaBrain color="#EC4899" size={40} />, title: 'AI/ML Solutions', desc: 'Custom machine learning models.' },
+  { id: 6, category: 'web', icon: <FaPaintBrush color="#F97316" size={40} />, title: 'Web Design', desc: 'UI/UX with Figma-grade precision.' },
+  { id: 7, category: 'marketing', icon: <FaBullhorn color="#22C55E" size={40} />, title: 'Digital Marketing', desc: 'SEO, SEM, social media.' },
+  { id: 8, category: 'other', icon: <FaTasks color="#8B5CF6" size={40} />, title: 'Product Management', desc: 'End-to-end product lifecycle.' },
+  { id: 9, category: 'other', icon: <FaPencilRuler color="#EF4444" size={40} />, title: 'Graphic Design', desc: 'Branding and visual identity.' },
+  { id: 10, category: 'ai', icon: <FaDatabase color="#0EA5E9" size={40} />, title: 'Vector DB Integration', desc: 'Pinecone, Weaviate, Qdrant.' },
+  { id: 11, category: 'ai', icon: <FaCogs color="#D97706" size={40} />, title: 'OpenAI/LLM Apps', desc: 'GPT-4, Claude, custom LLMs.' },
+  { id: 12, category: 'other', icon: <FaCloud color="#14B8A6" size={40} />, title: 'Cloud & DevOps', desc: 'AWS, Docker, Kubernetes.' },
 ];
+
 
 const categories = ['All', 'AI', 'Web', 'Mobile', 'Marketing'];
 

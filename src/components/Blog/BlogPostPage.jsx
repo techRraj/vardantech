@@ -31,7 +31,7 @@ const BlogPostPage = () => {
   return (
     <>
       <Helmet>
-        <title>{post.title} | Vardaantechhub Blog</title>
+        <title>{post.title} | Vardaan tech hub Blog</title>
         <meta name="description" content={post.excerpt} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
@@ -90,7 +90,7 @@ const BlogPostPage = () => {
               <img src={post.author.avatar} alt={post.author.name} />
               <div>
                 <strong>{post.author.name}</strong>
-                <p>Senior Developer at Vardaantechhub</p>
+                <p>Senior Developer at Vardaan tech hub</p>
               </div>
             </div>
 
