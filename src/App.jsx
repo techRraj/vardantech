@@ -12,7 +12,9 @@ import './App.module.css';
 import Referral from './pages/Referral';
 import Loader from './components/UI/Loader';
 import MovingBackground from './components/UI/MovingBackground';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react";
+
+
 // Lazy load pages for performance
 const HomePage = lazy(() => import('./pages/HomePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
