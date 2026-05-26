@@ -12,10 +12,7 @@ const FounderSpotlight = () => {
           whileHover={{ scale: 1.02 }}
           transition={{ type: 'tween' }}
         >
-          <img
-          src="../../../src/assets/ceo_mam.jpg"
-            // src="/src/assets/ceo_mam.jpg"
-            alt="Founder"
+         <img src="/assets/ceo_mam.jpg" alt="Founder"
             className={styles.image}
           />
           <div className={styles.parallaxOverlay} />
