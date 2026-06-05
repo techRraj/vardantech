@@ -51,7 +51,9 @@ PU-4, A.B. Road, Behind C-21 Mall </p>
           </div>
         </div>
         <div className={styles.bottom}>
-          <p>© {new Date().getFullYear()} VARDAAN TECH HUB. All rights reserved.</p>
+          {/* <p>© {new Date().getFullYear()} VARDAAN TECH HUB. All rights reserved.</p> */}
+          <p>© 2024 VARDAAN TECH HUB. All rights reserved.</p>
+
         </div>
       </div>
     </footer>

@@ -1,7 +1,9 @@
 import React, { lazy, Suspense } from 'react';
 import { useState, useEffect } from 'react';
 import SpecialOfferPopup from './components/UI/SpecialOfferPopup';
-import OfferTab from './components/UI/OfferTab';
+// import OfferTab from './components/UI/OfferTab';
+import ChatBot from './components/UI/ChatBot';
+
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './components/Layout/Navbar';
@@ -105,7 +107,8 @@ function App() {
       </main>
       <Footer />
       <WhatsAppButton />
-      <OfferTab onClick={handleReopenOffer} />
+      <ChatBot />
+      {/* <OfferTab onClick={handleReopenOffer} /> */}
       <SpecialOfferPopup isOpen={showOffer} onClose={handleCloseOffer} />
        <Analytics />
     </BrowserRouter>
