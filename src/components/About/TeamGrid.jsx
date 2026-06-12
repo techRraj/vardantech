@@ -50,16 +50,16 @@ const team = [
     email: '#',
     color: '#14b8a6'
   },
-  { 
-    name: 'Ranjana Karma', 
-    role: 'UX Director', 
-    img: ranjna, 
-    bio: 'Creating seamless user experiences.',
-    linkedin: '#',
-    twitter: '#',
-    email: '#',
-    color: '#f97316'
-  },
+  // { 
+  //   name: 'Ranjana Karma', 
+  //   role: 'UX Director', 
+  //   img: ranjna, 
+  //   bio: 'Creating seamless user experiences.',
+  //   linkedin: '#',
+  //   twitter: '#',
+  //   email: '#',
+  //   color: '#f97316'
+  // },
 ];
 
 // Floating particles for group image

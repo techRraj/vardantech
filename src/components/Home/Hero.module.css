@@ -14,7 +14,7 @@
 }
 
 .title {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 1.2;
   font-weight: 700;
   margin-bottom: var(--space-5);
@@ -40,41 +40,17 @@
   flex-wrap: wrap;
 }
 
-.heroVisual {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  min-height: 300px;
-}
-
-@media (max-width: 768px) {
-  .heroContainer {
-    flex-direction: column;
-    text-align: center;
-  }
-  .subtitle {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .ctaGroup {
-    justify-content: center;
-  }
-}
-
 .heroImage {
   max-width: 100%;
   height: auto;
-  display: block; /* ensures no extra space below */
+  display: block;
 }
-/* existing styles … */
 
-/* Highlight wrapper for underline positioning */
 .highlightWrapper {
   position: relative;
   display: inline-block;
 }
 
-/* Animated underline */
 .underline {
   position: absolute;
   left: 0;
@@ -85,4 +61,421 @@
   border-radius: 2px;
   transform-origin: left center;
   box-shadow: 0 0 10px rgba(246, 220, 92, 0.787);
+}
+
+/* ===== Flip Card ===== */
+.flipCard {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  position: relative;
+}
+
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.flipCardFront {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+}
+
+.flipCardFront img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.flipHint {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.flipCard:hover .flipHint,
+.flipCard:active .flipHint {
+  opacity: 1;
+}
+
+.flipCardBack {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  border-radius: 24px;
+  overflow: hidden;
+background: #4F46E5;
+background: radial-gradient(circle, rgba(79, 70, 229, 1) 0%, rgba(35, 22, 75, 1) 100%);  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-hover);
+}
+
+
+.backContent {
+  text-align: center;
+  color: white;
+  padding: var(--space-6);
+}
+
+ .logoImage {
+  width: 80%;
+  height: 80%;
+  margin: 0 auto var(--space-5);
+  /* filter: brightness(0) invert(1); */
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.backContent h3 {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.3px;
+}
+
+.backContent p {
+  font-size: var(--text-base);
+  opacity: 0.9;
+  margin-bottom: var(--space-5);
+}
+
+.backBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+}
+
+.backBadges span {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.flipGlow {
+  position: absolute;
+  inset: -10px;
+  border-radius: 30px;
+  background: radial-gradient(
+    circle at center,
+    rgba(139, 92, 246, 0.3),
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ═══════════════════════════════════════ */
+
+/* Large tablets & small laptops - 1024px */
+@media (max-width: 1024px) {
+  .heroContainer {
+    gap: var(--space-5);
+  }
+  
+  .flipCardInner {
+    max-width: 400px;
+  }
+  
+  .title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+  }
+}
+
+/* Tablets - 768px */
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--space-6) 0;
+  }
+
+  .heroContainer {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: var(--space-5);
+  }
+
+  .content {
+    flex: none;
+    width: 100%;
+  }
+
+  .title {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+  }
+
+  .subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: var(--text-base);
+    max-width: 500px;
+  }
+
+  .ctaGroup {
+    justify-content: center;
+  }
+
+  .flipCard {
+    flex: none;
+    width: 100%;
+    margin-bottom: var(--space-4);
+  }
+
+  .flipCardInner {
+    max-width: min(350px, 70vw);
+    aspect-ratio: 1 / 1;
+  }
+
+  .flipHint {
+    opacity: 1;
+    bottom: 12px;
+    font-size: 10px;
+    padding: 4px 14px;
+  }
+
+ .logoImage {
+  width: 80%;
+  height: 80%;
+  }
+
+  .backContent h3 {
+    font-size: var(--text-xl);
+  }
+
+  .backContent p {
+    font-size: var(--text-sm);
+  }
+
+  .backBadges span {
+    padding: 4px 10px;
+    font-size: 0.65rem;
+  }
+}
+
+/* Large phones - 576px */
+@media (max-width: 576px) {
+  .hero {
+    padding: var(--space-5) 0;
+  }
+
+  .title {
+    font-size: clamp(1.4rem, 6vw, 1.8rem);
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .ctaGroup {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .ctaGroup button {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .flipCardInner {
+    max-width: min(300px, 85vw);
+    aspect-ratio: 1 / 1;
+  }
+
+ .logoImage {
+  width: 80%;
+  height: 80%;
+  }
+
+  .backContent h3 {
+    font-size: var(--text-lg);
+  }
+
+  .backContent p {
+    font-size: var(--text-xs);
+  }
+
+  .backBadges {
+    gap: 4px;
+  }
+
+  .backBadges span {
+    padding: 3px 8px;
+    font-size: 0.6rem;
+  }
+}
+
+/* Small phones - 380px */
+@media (max-width: 380px) {
+  .hero {
+    padding: var(--space-4) 0;
+  }
+
+  .heroContainer {
+    gap: var(--space-3);
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .flipCardInner {
+    max-width: 90vw;
+    aspect-ratio: 4/3;
+  }
+
+  .flipHint {
+    bottom: 8px;
+    font-size: 9px;
+    padding: 3px 10px;
+  }
+
+ 
+  .logoImage {
+  width: 80%;
+  height: 80%;
+    margin-bottom: var(--space-3);
+    filter: brightness(0) invert(1);  /* ← This makes it white */
+  }
+
+  .backContent {
+    padding: var(--space-4);
+  }
+
+  .backContent h3 {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-1);
+  }
+
+  .backContent p {
+    font-size: 0.7rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .backBadges span {
+    padding: 2px 6px;
+    font-size: 0.55rem;
+  }
+}
+
+/* Large desktops - 1440px+ */
+@media (min-width: 1440px) {
+  .heroContainer {
+    gap: var(--space-8);
+  }
+
+  .content {
+    flex: 1.2;
+  }
+
+  .flipCard {
+    flex: 0.8;
+  }
+
+  .flipCardInner {
+    max-width: 550px;
+  }
+}
+
+/* Extra large screens - 1920px+ */
+@media (min-width: 1920px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    font-size: var(--text-xl);
+    max-width: 700px;
+  }
+
+  .flipCardInner {
+    max-width: 600px;
+  }
+}
+
+/* Touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .flipHint {
+    opacity: 1;
+  }
+
+  .flipCard:active .flipCardInner {
+    transition: transform 0.6s;
+  }
+}
+
+/* Dark Mode */
+[data-theme='dark'] .flipCardBack {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  border: 1px solid var(--border);
+}
+
+[data-theme='dark'] .backBadges span {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .underline {
+    animation: none !important;
+  }
+
+  .logoImage {
+    animation: none !important;
+  }
+}
+/* Always show hint on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .flipHint {
+    opacity: 1 !important;
+  }
+  
+  .flipCard:active .flipCardInner {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Focus visible for keyboard users */
+.flipCard:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 24px;
 }
