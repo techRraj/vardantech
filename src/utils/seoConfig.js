@@ -1,0 +1,25 @@
+export const siteConfig = {
+  name: 'Vardaan Tech Hub',
+  tagline: 'Building Intelligent AI Agents & Custom Chatbots',
+  url: 'https://vardaantechhub.com',
+  ogImage: 'https://vardaantechhub.com/assets/og-default.jpg',
+  logo: 'https://vardaantechhub.com/assets/logo.svg',
+  email: 'vardaantechhub.info@gmail.com',
+  phone: '+91 88897 10105',
+  whatsapp: '918889710105',
+  address: {
+    street: 'Platinum Plaza PU-4, A.B. Road, Behind C-21 Mall',
+    city: 'Indore',
+    state: 'Madhya Pradesh',
+    country: 'IN',
+    postalCode: '452001',
+  },
+  social: {
+    linkedin: 'https://linkedin.com/company/vardaan-tech-hub',
+    twitter: 'https://twitter.com/vardaantechhub',
+    instagram: 'https://instagram.com/vardaantechhub',
+    facebook: 'https://facebook.com/vardaantechhub',
+  },
+  foundingDate: '2018',
+  founder: 'Mrs. Mini Chauhan',
+};

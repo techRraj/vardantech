@@ -4,11 +4,20 @@ import ContactForm from '../components/Contact/ContactForm';
 import ContactInfo from '../components/Contact/ContactInfo';
 import styles from './ContactPage.module.css';
 import Breadcrumbs from '../components/Layout/Breadcrumbs';
+import PageSEO from '../components/SEO/PageSEO';
+import { localBusinessSchema } from '../utils/schema';
 const ContactPage = () => {
   return (
     <>
     <Breadcrumbs />
       <Helmet>
+        <PageSEO
+  title="Contact Us – Get a Free Demo Consultation Today"
+  description="Contact Vardaan Tech Hub for AI solutions, custom development, or a free consultation. Located in Indore, India. WhatsApp, email, or call us. Response within 15 minutes."
+  path="/contact"
+  keywords="contact AI company Indore, free demo consultation, hire AI developers, software company contact"
+  schema={localBusinessSchema}
+/>
   <title>Contact Us – Get a Free Demo Consultation</title>
   <meta name="description" content="..." />
   <script type="application/ld+json">
