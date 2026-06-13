@@ -9,6 +9,7 @@ const PageSEO = ({
   type = 'website',
   schema = null,
   keywords = '',
+  children,
 }) => {
   const fullTitle = title.includes(siteConfig.name) ? title : `${title} | ${siteConfig.name}`;
   const url = `${siteConfig.url}${path}`;
@@ -26,7 +27,7 @@ const PageSEO = ({
       <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       <link rel="canonical" href={url} />
 
-      {/* Open Graph / Facebook */}
+      {/* Open Graph */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={fullTitle} />
@@ -43,7 +44,6 @@ const PageSEO = ({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:site" content="@vardaantechhub" />
 
       {/* Schema.org JSON-LD */}
       {schema && (
@@ -51,6 +51,9 @@ const PageSEO = ({
           {JSON.stringify(schema)}
         </script>
       )}
+
+      {/* Any additional Helmet children */}
+      {children}
     </Helmet>
   );
 };
