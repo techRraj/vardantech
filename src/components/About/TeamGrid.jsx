@@ -5,7 +5,8 @@ import styles from './TeamGrid.module.css';
 import ceomamImg from '../../assets/ceomam.png';
 import anajana from '../../assets/anjana itwari2.jpg';
 import raj from '../../assets/profileraj.png';
-import ranjna from '../../assets/ranjanmam.jpeg';
+// import ranjna from '../../assets/ranjanmam.jpg';
+import ranjana from  '../../../public/assets/ranjanmam.jpg';
 import aman from '../../assets/aman.png';
 import groupImg from '../../assets/groupImg.png';
 
