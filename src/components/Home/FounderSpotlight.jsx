@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FiLinkedin, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import styles from './FounderSpotlight.module.css';
 
-import ranjna from '../../assets/ranjanmam.jpeg';
+// import ranjna from '../../assets/ranjanmam.jpeg';
 
 const founders = [
   {
@@ -19,7 +19,7 @@ const founders = [
     id: 2,
     name: 'Mrs. RANJANA VISHWAKARMA',
     role: 'Co-Founder & CTO',
-    image: '../src/assets/ranjanmam.jpeg',
+    image: '/assets/ranjanmam.jpg',
     quote: "Technology is not just about code — it's about solving real problems. We build solutions that create lasting impact for our clients worldwide.",
     linkedin: 'https://www.linkedin.com/',
     color: '#8b5cf6',
