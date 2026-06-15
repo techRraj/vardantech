@@ -8,20 +8,20 @@ import Milestones from '../components/About/Milestones';
 import Certifications from '../components/About/Certifications';
 import StatsCounter from '../components/About/StatsCounter';
 import styles from './AboutPage.module.css';
-import PageSEO from '../components/SEO/PageSEO';
+// import PageSEO from '../components/SEO/PageSEO';
 
 const AboutPage = () => {
   return (
     <>
       <Helmet>
-        <PageSEO
+        {/* <PageSEO
   title="About Us – Our Story, Mission & Leadership Team"
   description="Learn about Vardaan Tech Hub – our mission to democratize AI, our visionary leadership team, 200+ successful projects, and 15+ years of innovation in software development."
   path="/about"
   keywords="about Vardaan Tech Hub, AI company Indore, software development team, Mini Chauhan founder, tech leadership India"
-/>
+/> */}
         <title>About Us – Vardaan Tech Hub | Our Story, Mission & Team</title>
-        <meta name="description" content="Learn about Vardaan Tech Hub's journey, mission, values, and meet the expert team behind our AI and software solutions." />
+        <meta name="description" content="Learn about Vardaan Tech Hub – our mission to democratize AI, our visionary leadership team, 200+ successful projects, and 15+ years of innovation in software development." />
         <link rel="canonical" href="https://vardaantechhub.com/about" />
         <meta property="og:title" content="About Us – Vardaan Tech Hub | Our Story, Mission & Team" />
         <meta property="og:description" content="Learn about Vardaan Tech Hub's journey, mission, values, and meet the expert team." />

@@ -11,17 +11,18 @@ const BlogPage = () => {
     <>
     <Breadcrumbs />
       <Helmet>
-        <PageSEO
+        {/* <PageSEO
   title="Blog – AI, Software Development & Technology Insights"
   description="Read expert articles on AI agents, chatbots, web development, SEO, and digital transformation. Stay updated with Vardaan Tech Hub's tech blog."
-  path="/blog"
+  // path="/blog"
   type="website"
   keywords="AI blog, chatbot tutorial, web development tips, SEO guide, technology insights India"
-/>
+/> */}
         <title>Blog - AI & Software Development Insights</title>
-        <meta name="description" content="Read the latest articles on AI agents, chatbots, web development, and digital transformation from Vardaantechhub experts." />
+        <meta name="description" content="Read expert articles on AI agents, chatbots, web development, SEO, and digital transformation. Stay updated with Vardaan Tech Hub's tech blog." />
       </Helmet>
       <section className="section">
+        
         <div className={`container ${styles.container}`}>
           <BlogGrid />
           <BlogSidebar />

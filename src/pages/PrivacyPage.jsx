@@ -7,16 +7,16 @@ const PrivacyPage = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy | vardaantechhub</title>
+        <title>Privacy Policy | vardaan tech hub</title>
         <meta
           name="description"
-          content="vardaantechhub's privacy policy explains how we collect, use, and protect your personal information. Learn about your data rights."
+          content="vardaan tech hub's privacy policy explains how we collect, use, and protect your personal information. Learn about your data rights."
         />
         <link rel="canonical" href="https://vardaantechhub.com/privacy" />
-        <meta property="og:title" content="Privacy Policy | vardaantechhub" />
+        <meta property="og:title" content="Privacy Policy | vardaan tech hub" />
         <meta
           property="og:description"
-          content="Learn how vardaantechhub collects, uses, and protects your personal data."
+          content="Learn how vardaan tech hub collects, uses, and protects your personal data."
         />
         <meta property="og:url" content="https://vardaantechhub.com/privacy" />
         <meta property="og:image" content="https://vardaantechhub.com/assets/og-default.jpg" />
@@ -31,15 +31,15 @@ const PrivacyPage = () => {
             <h2>Objective</h2>
             <p>
               This Privacy Statement articulates the privacy and data protection principles
-              followed by <strong>vardaantechhub Private Limited</strong> (hereinafter
-              referred to as “vardaantechhub”, “we”, “us”, or “our”) with regard to the
+              followed by <strong>vardaan tech hub Private Limited</strong> (hereinafter
+              referred to as “vardaan tech hub”, “we”, “us”, or “our”) with regard to the
               personal information of its customers, partners, employees, applicants,
               contractors, prospects, vendors, and members of the Board of Directors (“Data
               Subjects”).
             </p>
             <p>
               This Privacy Statement explains the use and protection of personal information
-              collected by vardaantechhub. It applies to any personal information you
+              collected by vardaan tech hub. It applies to any personal information you
               provide to us and, subject to local law, any personal information we collect
               from other sources.
             </p>
@@ -49,7 +49,7 @@ const PrivacyPage = () => {
               This Privacy Statement covers our information practices, including how we
               collect, use, share, and protect the personal information you provide to us
               through our websites that link to this Privacy Statement (collectively
-              referred to as “vardaantechhub Websites”).
+              referred to as “vardaan tech hub Websites”).
             </p>
             <p>
               We may provide links to third‑party websites for your convenience. We are not
@@ -174,7 +174,7 @@ const PrivacyPage = () => {
               please contact us:
             </p>
             <address className={styles.address}>
-              vardaantechhub Private Limited<br />
+              vardaan tech hub Private Limited<br />
               Platinum Plaza PU-4, A.B. Road, Behind C-21 Mall<br />
               Indore, Madhya Pradesh – 452001, India<br />
               Phone: <a href="tel:+918889710105">+91 88897 10105</a><br />

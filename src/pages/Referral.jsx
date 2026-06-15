@@ -6,8 +6,8 @@ const Referral = () => (
   <>
   <Breadcrumbs />
     <Helmet>
-      <title>Referral Program | Vardaantechhub</title>
-      <meta name="description" content="Earn 10% commission by referring clients to Vardaantechhub. Join our partner program today." />
+      <title>Referral Program | Vardaan tech hub</title>
+      <meta name="description" content="Earn 10% commission by referring clients to Vardaan tech hub. Join our partner program today." />
     </Helmet>
     <section className="section">
       <div className="container" style={{ textAlign: 'center', maxWidth: 600, margin: '0 auto' }}>

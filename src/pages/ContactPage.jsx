@@ -11,20 +11,20 @@ const ContactPage = () => {
     <>
     <Breadcrumbs />
       <Helmet>
-        <PageSEO
+        {/* <PageSEO
   title="Contact Us – Get a Free Demo Consultation Today"
   description="Contact Vardaan Tech Hub for AI solutions, custom development, or a free consultation. Located in Indore, India. WhatsApp, email, or call us. Response within 15 minutes."
   path="/contact"
   keywords="contact AI company Indore, free demo consultation, hire AI developers, software company contact"
   schema={localBusinessSchema}
-/>
-  <title>Contact Us – Get a Free Demo Consultation</title>
-  <meta name="description" content="..." />
+/> */}
+  <title>Contact Us –Contact Us – Get a Free Demo Consultation Today</title>
+  <meta name="description" content="Contact Vardaan Tech Hub for AI solutions, custom development, or a free consultation. Located in Indore, India. WhatsApp, email, or call us. Response within 15 minutes." />
   <script type="application/ld+json">
     {JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Vardana Infotech Private Limited",
+      "name": "Vardaan Tech Hub",
       "image": "https://vardaantechhub.com/assets/logo.svg",
       "address": {
         "@type": "PostalAddress",
