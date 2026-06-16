@@ -221,32 +221,32 @@ const ChatBot = () => {
 
   return (
     <>
-      {/* Floating Button */}
-     <motion.button
-  className={styles.floatingBtn}
-  onClick={() => {
-    if (isOpen) {
-      setIsOpen(false);     // Close if already open
-    } else {
-      setIsOpen(true);      // Open if closed
-      setIsMinimized(false); // Ensure it's not minimized
-    }
-  }}
-  whileHover={{ scale: 1.08 }}
-  whileTap={{ scale: 0.92 }}
-  aria-label={isOpen ? "Close chat" : "Open chat"}
->
-        <motion.div className={styles.pulseRing} animate={{ scale: [1, 1.6, 1], opacity: [0.4, 0, 0.4] }} transition={{ repeat: Infinity, duration: 2.5 }} />
-  <motion.div className={styles.pulseRing2} animate={{ scale: [1, 2, 1], opacity: [0.2, 0, 0.2] }} transition={{ repeat: Infinity, duration: 2.5, delay: 0.8 }} />
-        {isOpen ? (
-    <FiX size={24} className={styles.btnIcon} />
-  ) : (
-    <FiMessageCircle size={24} className={styles.btnIcon} />
-  )}
-        <span className={styles.btnBadge}>1</span>
-      </motion.button>
+      {/* Floating Button - ONLY SHOWS WHEN CHAT IS CLOSED */}
+      <AnimatePresence>
+        {!isOpen && (
+          <motion.button
+            className={styles.floatingBtn}
+            onClick={() => {
+              setIsOpen(true);
+              setIsMinimized(false);
+            }}
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.92 }}
+            aria-label="Open chat"
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0, opacity: 0 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+          >
+            <motion.div className={styles.pulseRing} animate={{ scale: [1, 1.6, 1], opacity: [0.4, 0, 0.4] }} transition={{ repeat: Infinity, duration: 2.5 }} />
+            <motion.div className={styles.pulseRing2} animate={{ scale: [1, 2, 1], opacity: [0.2, 0, 0.2] }} transition={{ repeat: Infinity, duration: 2.5, delay: 0.8 }} />
+            <FiMessageCircle size={24} className={styles.btnIcon} />
+            <span className={styles.btnBadge}>1</span>
+          </motion.button>
+        )}
+      </AnimatePresence>
 
-      {/* Chat Window */}
+      {/* Chat Window - SHOWS WHEN CHAT IS OPEN */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -272,6 +272,7 @@ const ChatBot = () => {
                 <button onClick={() => setIsMinimized(!isMinimized)} className={styles.headerBtn} aria-label="Minimize">
                   <FiChevronDown size={18} style={{ transform: isMinimized ? 'rotate(180deg)' : 'none', transition: '0.3s' }} />
                 </button>
+                {/* CROSS BUTTON - This will close the chat and bring back the floating button */}
                 <button onClick={() => setIsOpen(false)} className={styles.headerBtn} aria-label="Close">
                   <FiX size={18} />
                 </button>
