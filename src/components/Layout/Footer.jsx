@@ -13,10 +13,10 @@ const Footer = () => {
             <img src="/assets/logo3.png" alt="Vardaantech Hub" className={styles.footerLogo} />
             <p>Building intelligent solutions for tomorrow's challenges.</p>
             <div className={styles.socials}>
-              <a href="#"><FiInstagram /></a>
-              <a href="#"><FiLinkedin /></a>
-              <a href="#"><FiTwitter /></a>
-              <a href="#"><FiFacebook /></a>
+              <a href="https://www.instagram.com/vardaantechhub/"><FiInstagram /></a>
+              <a href="https://www.linkedin.com/company/vardaantechhub-india/posts/?feedView=all"><FiLinkedin /></a>
+              {/* <a href="#"><FiTwitter /></a>
+              <a href="#"><FiFacebook /></a> */}
             </div>
           </div>
           <div className={styles.links}>

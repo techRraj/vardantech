@@ -24,10 +24,9 @@ Indore, , Indore, India</span>
           <FiClock /> <span>Mon-Fri: 9:00 AM - 6:00 PM IST</span>
         </div>
         <div className={styles.social}>
-          <a href="#"><FiInstagram /></a>
-          <a href="#"><FiLinkedin /></a>
-          <a href="#"><FiTwitter /></a>
-          <a href="#"><FaWhatsapp /></a>
+        <a href="https://www.instagram.com/vardaantechhub/"><FiInstagram /></a>
+                      <a href="https://www.linkedin.com/company/vardaantechhub-india/posts/?feedView=all"><FiLinkedin /></a>
+         
         </div>
       </div>
       <MapPlaceholder />

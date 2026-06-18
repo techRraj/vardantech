@@ -170,7 +170,7 @@ const FounderSpotlight = () => {
                     "{founder.quote}"
                   </motion.p>
 
-                  {founder.linkedin && (
+                  {/* {founder.linkedin && (
                     <motion.a
                       href={founder.linkedin}
                       target="_blank"
@@ -185,7 +185,7 @@ const FounderSpotlight = () => {
                     >
                       <FiLinkedin size={20} /> Connect on LinkedIn
                     </motion.a>
-                  )}
+                  )} */}
                 </div>
               </motion.div>
             </AnimatePresence>

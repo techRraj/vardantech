@@ -15,7 +15,7 @@ import Referral from './pages/Referral';
 import Loader from './components/UI/Loader';
 import MovingBackground from './components/UI/MovingBackground';
 import { Analytics } from "@vercel/analytics/react";
-
+import ClickRipple from './components/UI/ClickRipple';
 
 // Lazy load pages for performance
 const HomePage = lazy(() => import('./pages/HomePage'));
@@ -100,6 +100,7 @@ function App() {
   return (
     <BrowserRouter>
     <MovingBackground />
+    <ClickRipple />
       <ScrollProgress />
       <Navbar />
       <main style={{ minHeight: '80vh' }}>

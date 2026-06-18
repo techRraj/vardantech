@@ -6,7 +6,7 @@ import ceomamImg from '../../assets/ceomam.png';
 import anajana from '../../assets/anjana itwari2.jpg';
 import raj from '../../assets/profileraj.png';
 // import ranjna from '../../assets/ranjanmam.jpg';
-import ranjana from  '../../../public/assets/ranjanmam.jpg';
+import ranjna from  '../../../public/assets/ranjanmam.jpg';
 import aman from '../../assets/aman.png';
 import groupImg from '../../assets/groupImg.png';
 
@@ -20,6 +20,16 @@ const team = [
     twitter: '#',
     email: '#',
     color: '#0a66c2'
+  },
+   { 
+    name: 'Ranjana Karma', 
+    role: 'co-Founder & CTO', 
+    img: ranjna, 
+    bio: 'co-founder of vardaan tech hub',
+    linkedin: '#',
+    twitter: '#',
+    email: '#',
+    color: '#f97316'
   },
   { 
     name: 'Rajkumar Chourasiya', 
@@ -51,16 +61,7 @@ const team = [
     email: '#',
     color: '#14b8a6'
   },
-  // { 
-  //   name: 'Ranjana Karma', 
-  //   role: 'UX Director', 
-  //   img: ranjna, 
-  //   bio: 'Creating seamless user experiences.',
-  //   linkedin: '#',
-  //   twitter: '#',
-  //   email: '#',
-  //   color: '#f97316'
-  // },
+ 
 ];
 
 // Floating particles for group image

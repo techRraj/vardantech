@@ -98,3 +98,95 @@ ol {
     transform: scale(0.98);
   }
 }
+
+
+/* ═══════════════════════════════════════
+   Global Click Ripple Effect
+   ═══════════════════════════════════════ */
+
+.ripple-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99999;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translate(-50%, -50%);
+  animation: ripple-animation 0.6s ease-out forwards;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+@keyframes ripple-animation {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+  }
+}
+
+/* Dark mode ripple color */
+[data-theme='dark'] .ripple {
+  background: #3b82f6;
+  opacity: 0.4;
+}
+
+/* Touch devices - smaller ripple */
+@media (hover: none) and (pointer: coarse) {
+  @keyframes ripple-animation {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 0.4;
+    }
+    100% {
+      width: 50px;
+      height: 50px;
+      opacity: 0;
+    }
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .ripple {
+    animation: none !important;
+    display: none;
+  }
+}
+
+/* Hover ripple for interactive elements */
+a, button, .interactive, [role="button"], input[type="submit"] {
+  position: relative;
+  /* overflow: hidden; */
+}
+
+a::after, button::after, .interactive::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+a:hover::after, button:hover::after, .interactive:hover::after {
+  opacity: 1;
+}
+
+/* Dark mode */
+[data-theme='dark'] a::after,
+[data-theme='dark'] button::after,
+[data-theme='dark'] .interactive::after {
+  background: radial-gradient(circle at center, rgba(255,255,255,0.15) 0%, transparent 70%);
+}
