@@ -8,6 +8,7 @@ import ClientFeedback from '../components/Home/ClientFeedback';
 import FreeDemoBanner from '../components/Home/FreeDemoBanner';
 import PageSEO from '../components/SEO/PageSEO';
 import{websiteSchema,organizationSchema} from '../utils/schema';
+import Partners from '../components/Home/Partners';
 const HomePage = () => {
   return (
     <>
@@ -22,6 +23,7 @@ const HomePage = () => {
       <TechStackSlider />
       <ServicesHighlight />
       <WhyChooseUs />
+      <Partners />
       <FounderSpotlight />
       <ClientFeedback />
       <FreeDemoBanner />

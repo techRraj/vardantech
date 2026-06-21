@@ -1,0 +1,343 @@
+/* ═══════════════════════════════════════
+   Partners Section - Premium Styles
+   ═══════════════════════════════════════ */
+
+.section {
+  padding: var(--space-9) 0;
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== Header ===== */
+.header {
+  text-align: center;
+  margin-bottom: var(--space-7);
+}
+
+.badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(10,102,194,0.15), rgba(139,92,246,0.15));
+  border: 1px solid rgba(10,102,194,0.3);
+  color: var(--accent);
+  padding: 8px 22px;
+  border-radius: 30px;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: var(--space-4);
+}
+
+.header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+
+.header p {
+  color: var(--text-secondary);
+  font-size: var(--text-lg);
+  max-width: 600px;
+  margin: 0 auto var(--space-5);
+}
+
+.divider {
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), #8b5cf6);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+/* ===== Trust Badges ===== */
+.trustGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  margin-bottom: var(--space-8);
+}
+
+.trustCard {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: var(--space-5);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+}
+
+.trustCard:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-hover);
+}
+
+.trustIcon {
+  font-size: 32px;
+  color: var(--accent);
+  margin-bottom: var(--space-3);
+}
+
+.trustCard h4 {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.trustCard p {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+/* ===== Sub Title ===== */
+.subTitle {
+  text-align: center;
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-5);
+  color: var(--text-primary);
+}
+
+/* ===== Partner Section ===== */
+.partnerSection {
+  margin-bottom: var(--space-8);
+}
+
+/* Marquee */
+.marqueeWrapper {
+  overflow: hidden;
+  margin-bottom: var(--space-5);
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.marquee,
+.marqueeReverse {
+  display: flex;
+  gap: var(--space-5);
+  width: max-content;
+}
+
+/* Partner Card - Large */
+.partnerCard {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: var(--space-5);
+  min-width: 200px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  cursor: default;
+}
+
+.partnerCard:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-hover);
+}
+
+.partnerLogo {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partnerLogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: filter 0.3s;
+}
+
+.partnerCard:hover .partnerLogo img {
+  filter: grayscale(0%);
+}
+
+.partnerInfo h5 {
+  font-size: var(--text-base);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.partnerInfo span {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.partnerInfo small {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Partner Card - Small */
+.partnerCardSmall {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: var(--space-3) var(--space-4);
+  min-width: 140px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  box-shadow: var(--shadow);
+  cursor: default;
+  transition: all 0.3s;
+}
+
+.partnerCardSmall img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: filter 0.3s;
+}
+
+.partnerCardSmall:hover img {
+  filter: grayscale(0%);
+}
+
+.partnerCardSmall span {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+/* ===== Client Section ===== */
+.clientSection {
+  margin-bottom: var(--space-8);
+}
+
+.clientCard {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: var(--space-3) var(--space-5);
+  min-width: 140px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  box-shadow: var(--shadow);
+  cursor: default;
+  transition: all 0.3s;
+}
+
+.clientCard:hover {
+  border-color: var(--accent);
+}
+
+.clientCard img {
+  width: 80px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.clientCard span {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* ===== CTA ===== */
+.cta {
+  margin-top: var(--space-6);
+}
+
+.ctaCard {
+  background: linear-gradient(135deg, var(--accent), #4f46e5);
+  border-radius: 24px;
+  padding: var(--space-7) var(--space-6);
+  text-align: center;
+  color: white;
+  box-shadow: 0 20px 50px rgba(10, 102, 194, 0.3);
+}
+
+.ctaCard h3 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-3);
+}
+
+.ctaCard p {
+  opacity: 0.9;
+  margin-bottom: var(--space-5);
+}
+
+.ctaBtn {
+  display: inline-block;
+  background: white;
+  color: var(--accent);
+  padding: var(--space-3) var(--space-7);
+  border-radius: 30px;
+  font-weight: 700;
+  transition: transform 0.3s;
+}
+
+.ctaBtn:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .trustGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-7) 0;
+  }
+
+  .partnerCard {
+    min-width: 160px;
+    padding: var(--space-4);
+  }
+
+  .clientCard {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .trustGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .partnerCard {
+    min-width: 140px;
+  }
+
+  .partnerCardSmall {
+    min-width: 120px;
+  }
+
+  .ctaCard {
+    padding: var(--space-5) var(--space-4);
+  }
+
+  .ctaCard h3 {
+    font-size: var(--text-xl);
+  }
+}
+
+/* ===== Dark Mode ===== */
+[data-theme='dark'] .partnerLogo img,
+[data-theme='dark'] .partnerCardSmall img {
+  filter: brightness(0.9);
+}
+
+[data-theme='dark'] .partnerCard:hover .partnerLogo img,
+[data-theme='dark'] .partnerCardSmall:hover img {
+  filter: brightness(1);
+}

@@ -16,6 +16,7 @@ import Loader from './components/UI/Loader';
 import MovingBackground from './components/UI/MovingBackground';
 import { Analytics } from "@vercel/analytics/react";
 import ClickRipple from './components/UI/ClickRipple';
+import ParticleBackground from './components/UI/ParticleBackground';
 
 // Lazy load pages for performance
 const HomePage = lazy(() => import('./pages/HomePage'));
@@ -29,11 +30,31 @@ const BlogPostPage = lazy(() => import('./components/Blog/BlogPostPage'));
 const FreeAudit = lazy(() => import('./pages/FreeAudit'));
 const PrivacyPage =lazy(()=> import('./pages/PrivacyPage'));
 
-// Page transition variants
+// 3D page transition variants
 const pageVariants = {
-  initial: { opacity: 0, x: -20 },
-  animate: { opacity: 1, x: 0, transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] } },
-  exit: { opacity: 0, x: 20, transition: { duration: 0.3 } }
+  initial: { 
+    opacity: 0, 
+    y: 30, 
+    rotateX: 3,
+    scale: 0.97,
+  },
+  animate: { 
+    opacity: 1, 
+    y: 0, 
+    rotateX: 0,
+    scale: 1,
+    transition: { 
+      duration: 0.7, 
+      ease: [0.4, 0, 0.2, 1],
+    } 
+  },
+  exit: { 
+    opacity: 0, 
+    y: -30, 
+    rotateX: -3,
+    scale: 0.97,
+    transition: { duration: 0.4 } 
+  },
 };
 
 const AnimatedRoutes = () => {
@@ -99,11 +120,12 @@ function App() {
   };
   return (
     <BrowserRouter>
-    <MovingBackground />
+    {/* <MovingBackground /> */}
+    <ParticleBackground />
     <ClickRipple />
       <ScrollProgress />
       <Navbar />
-      <main style={{ minHeight: '80vh' }}>
+      <main style={{ minHeight: '80vh' , position: 'relative', zIndex: 1}}>
         <AnimatedRoutes />
       </main>
       <Footer />
