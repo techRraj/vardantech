@@ -5,7 +5,7 @@ import ServicesHighlight from '../components/Home/ServicesHighlight';
 import WhyChooseUs from '../components/Home/WhyChooseUs';
 import FounderSpotlight from '../components/Home/FounderSpotlight';
 import ClientFeedback from '../components/Home/ClientFeedback';
-import FreeDemoBanner from '../components/Home/FreeDemoBanner';
+// import FreeDemoBanner from '../components/Home/FreeDemoBanner';
 import PageSEO from '../components/SEO/PageSEO';
 import{websiteSchema,organizationSchema} from '../utils/schema';
 import Partners from '../components/Home/Partners';
@@ -26,7 +26,7 @@ const HomePage = () => {
       <Partners />
       <FounderSpotlight />
       <ClientFeedback />
-      <FreeDemoBanner />
+      {/* <FreeDemoBanner /> */}
     </>
   );
 };
