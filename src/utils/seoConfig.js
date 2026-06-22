@@ -1,7 +1,12 @@
 export const siteConfig = {
   name: 'Vardaan Tech Hub',
-  tagline: 'Building Intelligent AI Agents & Custom Chatbots',
+  alternateNames: ['Vardaan Technologies', 'Vardaan Tech', 'Vardaan Infotech'],
   url: 'https://vardaantechhub.com',
+  alternateDomains: [
+    'https://vardaantech.com',
+    'https://vardaan.asia',
+    'https://vardaantechnologies.com',
+  ],
   ogImage: 'https://vardaantechhub.com/assets/og-default.jpg',
   logo: 'https://vardaantechhub.com/assets/logo.svg',
   email: 'vardaantechhub.info@gmail.com',
@@ -22,4 +27,15 @@ export const siteConfig = {
   },
   foundingDate: '2018',
   founder: 'Mrs. Mini Chauhan',
+  keywords: [
+    'Vardaan Tech Hub',
+    'Vardaan Technologies',
+    'Vardaan Infotech',
+    'vardaantech',
+    'vardaan.asia',
+    'AI agent development',
+    'custom chatbot',
+    'web development Indore',
+    'software company India',
+  ],
 };

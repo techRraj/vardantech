@@ -42,13 +42,13 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
 
       <div className={styles.sidebarFooter}>
         <ThemeToggle />
-        <div className={styles.socialIcons}>
+        {/* <div className={styles.socialIcons}>
           <a href="#" aria-label="Instagram"><FiInstagram size={22} /></a>
           <a href="#" aria-label="LinkedIn"><FiLinkedin size={22} /></a>
           <a href="#" aria-label="Twitter"><FiTwitter size={22} /></a>
           <a href="#" aria-label="Facebook"><FiFacebook size={22} /></a>
-        </div>
-        <p className={styles.copyright}>© 2026 Vardana Infotech</p>
+        </div> */}
+        <p className={styles.copyright}>© 2024 Vardaan tech hub</p>
       </div>
     </motion.aside>
   );

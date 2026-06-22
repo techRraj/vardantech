@@ -22,7 +22,7 @@ const team = [
     color: '#0a66c2'
   },
    { 
-    name: 'Ranjana Karma', 
+    name: 'Ranjana Vishwakarma', 
     role: 'co-Founder & CTO', 
     img: ranjna, 
     bio: 'co-founder of vardaan tech hub',
@@ -33,7 +33,7 @@ const team = [
   },
   { 
     name: 'Rajkumar Chourasiya', 
-    role: 'Head of AI', 
+    role: ' AI Developer', 
     img: raj, 
     bio: 'Specialist in LLMs and RAG systems.',
     linkedin: '#',
@@ -43,7 +43,7 @@ const team = [
   },
   { 
     name: 'Anjana Tiwari', 
-    role: 'Product Lead', 
+    role: 'Senior frontend Developer', 
     img: anajana, 
     bio: 'Driving product strategy and UX.',
     linkedin: '#',
@@ -271,38 +271,38 @@ const TeamGrid = () => {
               <p className={styles.bio}>{member.bio}</p>
 
               {/* Social Icons */}
-              <motion.div 
+              {/* <motion.div 
                 className={styles.social}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 + idx * 0.1 }}
-              >
-                <motion.a 
+              > */}
+                {/* <motion.a 
                   href={member.linkedin} 
                   aria-label="LinkedIn"
                   whileHover={{ scale: 1.2, backgroundColor: member.color, color: '#fff' }}
                   whileTap={{ scale: 0.9 }}
                 >
                   <FiLinkedin />
-                </motion.a>
-                <motion.a 
+                </motion.a> */}
+                {/* <motion.a 
                   href={member.twitter} 
                   aria-label="Twitter"
                   whileHover={{ scale: 1.2, backgroundColor: member.color, color: '#fff' }}
                   whileTap={{ scale: 0.9 }}
                 >
                   <FiTwitter />
-                </motion.a>
-                <motion.a 
+                </motion.a> */}
+                {/* <motion.a 
                   href={`mailto:${member.email}`} 
                   aria-label="Email"
                   whileHover={{ scale: 1.2, backgroundColor: member.color, color: '#fff' }}
                   whileTap={{ scale: 0.9 }}
                 >
                   <FiMail />
-                </motion.a>
-              </motion.div>
+                </motion.a> */}
+              {/* </motion.div> */}
             </motion.div>
           ))}
         </div>

@@ -61,7 +61,7 @@ const Navbar = () => {
   className={styles.ctaBtn}
   onClick={() => {
     const phone = '918889710105';
-    const message = encodeURIComponent("Hi Vardana Infotech, I'm interested in a free demo consultation.");
+    const message = encodeURIComponent("Hi Vardaan tech hub, I'm interested in a free demo consultation.");
     window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
   }}
 >

@@ -31,7 +31,7 @@ const SpecialOfferPopup = ({ isOpen, onClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const message = encodeURIComponent(
-      `Hi Vardana Infotech! I want to claim the limited-time offer.\nName: ${name}\nEmail: ${email}`
+      `Hi Vardaan tech hub ! I want to claim the limited-time offer.\nName: ${name}\nEmail: ${email}`
     );
     window.open(`https://wa.me/918889710105?text=${message}`, '_blank');
     onClose(); // close popup after submitting

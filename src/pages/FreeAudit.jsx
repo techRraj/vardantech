@@ -5,7 +5,7 @@ const FreeAudit = () => (
   <>
   <Breadcrumbs />
     <Helmet>
-      <title>Free AI Readiness Audit | Vardaantechhub</title>
+      <title>Free AI Readiness Audit | Vardaan tech hub</title>
       <meta name="description" content="Get a free, personalized audit of your business to discover how AI can save costs and increase revenue." />
     </Helmet>
     <section className="section">

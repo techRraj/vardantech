@@ -13,19 +13,27 @@ const PageSEO = ({
 }) => {
   const fullTitle = title.includes(siteConfig.name) ? title : `${title} | ${siteConfig.name}`;
   const url = `${siteConfig.url}${path}`;
+  
+  // Combine all brand keywords
+  const allKeywords = [
+    ...siteConfig.keywords,
+    ...(keywords ? keywords.split(',').map(k => k.trim()) : []),
+  ].join(', ');
 
   return (
     <Helmet>
-      {/* Primary Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="title" content={fullTitle} />
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="keywords" content={allKeywords} />
       <meta name="author" content={siteConfig.name} />
-      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="robots" content="index, follow, max-image-preview:large" />
       <link rel="canonical" href={url} />
+
+      {/* Alternate domain canonical references */}
+      {siteConfig.alternateDomains.map(domain => (
+        <link key={domain} rel="alternate" href={`${domain}${path}`} />
+      ))}
 
       {/* Open Graph */}
       <meta property="og:type" content={type} />
@@ -33,8 +41,6 @@ const PageSEO = ({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content={siteConfig.name} />
       <meta property="og:locale" content="en_IN" />
 
@@ -45,14 +51,11 @@ const PageSEO = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
 
-      {/* Schema.org JSON-LD */}
       {schema && (
         <script type="application/ld+json">
           {JSON.stringify(schema)}
         </script>
       )}
-
-      {/* Any additional Helmet children */}
       {children}
     </Helmet>
   );

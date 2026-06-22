@@ -1,47 +1,307 @@
+/* ═══════════════════════════════════════
+   Why Choose Us - Optimized & Responsive
+   ═══════════════════════════════════════ */
 
-.heading {
-  text-align: center;
-  margin-bottom: var(--space-7);
+.section {
+  padding: clamp(40px, 8vh, 80px) 0;
+  position: relative;
+  overflow: hidden;
+  contain: content;
 }
 
+/* ===== Header ===== */
+.header {
+  text-align: center;
+  margin-bottom: clamp(30px, 5vw, 50px);
+}
+
+.badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(10,102,194,0.1), rgba(139,92,246,0.1));
+  border: 1px solid rgba(10,102,194,0.25);
+  color: var(--accent);
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: clamp(0.7rem, 1.2vw, var(--text-sm));
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-4);
+}
+
+.header h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.3px;
+}
+
+.header p {
+  color: var(--text-secondary);
+  font-size: clamp(0.9rem, 1.3vw, var(--text-lg));
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ===== Grid ===== */
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-5);
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(12px, 2vw, var(--space-5));
+  contain: layout style;
 }
 
+/* ===== Pillar Card ===== */
 .pillar {
   background: var(--card-bg);
-  padding: var(--space-5);
+  padding: clamp(16px, 3vw, var(--space-6));
   border-radius: 16px;
   text-align: center;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+  contain: layout style paint;
+}
+
+.pillar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--pillar-color, var(--accent));
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.pillar:hover::before {
+  transform: scaleX(1);
+}
+
+/* ===== Icon ===== */
+.iconWrapper {
+  width: clamp(50px, 8vw, 64px);
+  height: clamp(50px, 8vw, 64px);
+  border-radius: 16px;
+  background: var(--pillar-color, var(--accent));
+  background: linear-gradient(135deg, 
+    color-mix(in srgb, var(--pillar-color, var(--accent)) 15%, transparent),
+    color-mix(in srgb, var(--pillar-color, var(--accent)) 5%, transparent)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto clamp(12px, 2vw, var(--space-4));
+  transition: transform 0.3s;
+}
+
+.pillar:hover .iconWrapper {
+  transform: scale(1.1) rotate(-5deg);
 }
 
 .icon {
-  font-size: 36px;
-  color: var(--accent);
-  margin-bottom: var(--space-4);
+  font-size: clamp(24px, 4vw, 32px);
+  color: var(--pillar-color, var(--accent));
+  transition: transform 0.3s;
 }
 
+.pillar:hover .icon {
+  transform: scale(1.15);
+}
+
+/* ===== Stat ===== */
 .stat {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--accent);
-  line-height: 1.2;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--pillar-color, var(--accent));
+  line-height: 1.1;
+  margin-bottom: var(--space-1);
 }
 
+.suffix {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 600;
+}
+
+/* ===== Content ===== */
 .pillar h3 {
-  margin: var(--space-2) 0;
+  font-size: clamp(0.85rem, 1.3vw, var(--text-base));
+  font-weight: 700;
+  margin: var(--space-2) 0 var(--space-1);
 }
 
 .pillar p {
   color: var(--text-muted);
+  font-size: clamp(0.75rem, 1vw, var(--text-sm));
+  margin-bottom: var(--space-3);
 }
 
+/* ===== Decorative Line ===== */
+.line {
+  width: 40px;
+  height: 3px;
+  border-radius: 2px;
+  margin: var(--space-3) auto 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.pillar:hover .line {
+  opacity: 1;
+}
+
+/* ===== Bottom CTA ===== */
+.bottomCta {
+  text-align: center;
+  margin-top: clamp(30px, 5vw, var(--space-7));
+}
+
+.bottomCta p {
+  font-size: clamp(0.9rem, 1.3vw, var(--text-lg));
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.ctaLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 28px;
+  background: var(--accent);
+  color: white;
+  border-radius: 30px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.ctaLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(10, 102, 194, 0.3);
+}
+
+/* ═══════════════════════════════════════
+   Responsive Breakpoints
+   ═══════════════════════════════════════ */
+
+/* Tablets & Small Laptops */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
   .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+
+  .pillar {
+    padding: var(--space-4);
+    border-radius: 14px;
+  }
+
+  .line {
+    display: none;
+  }
+}
+
+/* Large Phones */
+@media (max-width: 576px) {
+  .grid {
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .pillar {
+    padding: var(--space-3);
+    border-radius: 12px;
+  }
+
+  .iconWrapper {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .stat {
+    font-size: 1.5rem;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 380px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .pillar {
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .iconWrapper {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+
+  .stat {
+    font-size: 1.2rem;
+  }
+
+  .pillar h3 {
+    font-size: 0.7rem;
+  }
+
+  .pillar p {
+    font-size: 0.65rem;
+  }
+
+  .bottomCta p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Large Desktops */
+@media (min-width: 1440px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+/* ===== Dark Mode ===== */
+[data-theme='dark'] .iconWrapper {
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--pillar-color, var(--accent)) 20%, #1e293b),
+    color-mix(in srgb, var(--pillar-color, var(--accent)) 8%, #1e293b)
+  );
+}
+
+/* ===== Performance Optimizations ===== */
+@media (prefers-reduced-motion: reduce) {
+  .pillar, .iconWrapper, .icon, .line {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@media (update: slow) {
+  .pillar {
+    transition: none !important;
   }
 }
