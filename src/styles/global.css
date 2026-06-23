@@ -444,3 +444,44 @@ img {
     --border: #fff;
   }
 }
+@media (max-width: 600px) {
+  .floatingBtn {
+    bottom: 16px;
+    left: 16px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsappBtn {
+    bottom: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .chatWindow {
+    bottom: 80px;
+    left: 10px;
+    width: calc(100vw - 20px);
+  }
+}
+/* Ensure all floating elements stay fixed */
+[class*="floating"],
+[class*="Floating"],
+[class*="whatsapp"],
+[class*="WhatsApp"],
+.floatingBtn,
+.whatsappBtn,
+.offerTab {
+  position: fixed !important;
+  transform: none !important;
+}
+
+main {
+  min-height: 80vh;
+  position: relative;
+  z-index: 1;
+  /* ❌ Remove if present: */
+  /* overflow: hidden; */
+  /* transform: translateZ(0); */
+}
