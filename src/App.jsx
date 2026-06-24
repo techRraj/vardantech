@@ -1,6 +1,5 @@
-import React, { lazy, Suspense } from 'react';
-import { useState, useEffect } from 'react';
-import SpecialOfferPopup from './components/UI/SpecialOfferPopup';
+import React, { lazy, Suspense, useState, useEffect } from 'react';
+// import SpecialOfferPopup from './components/UI/SpecialOfferPopup';
 // import OfferTab from './components/UI/OfferTab';
 import ChatBot from './components/UI/ChatBot';
 
@@ -17,6 +16,7 @@ import MovingBackground from './components/UI/MovingBackground';
 import { Analytics } from "@vercel/analytics/react";
 import ClickRipple from './components/UI/ClickRipple';
 import ParticleBackground from './components/UI/ParticleBackground';
+import CookieConsent from './components/UI/CookieConsent';
 
 // Lazy load pages for performance
 const HomePage = lazy(() => import('./pages/HomePage'));
@@ -92,34 +92,37 @@ const AnimatedRoutes = () => {
 
 function App() {
 
-   const [showOffer, setShowOffer] = useState(false);
-  const [popupDismissed, setPopupDismissed] = useState(false);
+  //  const [showOffer, setShowOffer] = useState(false);
+  // const [popupDismissed, setPopupDismissed] = useState(false);
 
-  // Check session storage for whether popup was already shown/closed
-  useEffect(() => {
-    const dismissed = sessionStorage.getItem('offerPopupDismissed');
-    if (!dismissed) {
-      // Show popup after a short delay to ensure everything is loaded
-      const timeout = setTimeout(() => setShowOffer(true), 2000);
-      return () => clearTimeout(timeout);
-    } else {
-      setPopupDismissed(true);
-    }
-  }, []);
+  // // Check session storage for whether popup was already shown/closed
+  // useEffect(() => {
+  //   const dismissed = sessionStorage.getItem('offerPopupDismissed');
+  //   if (!dismissed) {
+  //     // Show popup after a short delay to ensure everything is loaded
+  //     const timeout = setTimeout(() => setShowOffer(true), 2000);
+  //     return () => clearTimeout(timeout);
+  //   } else {
+  //     setPopupDismissed(true);
+  //   }
+  // }, []);
 
-  const handleCloseOffer = () => {
-    setShowOffer(false);
-    sessionStorage.setItem('offerPopupDismissed', 'true');
-    setPopupDismissed(true);
-  };
+  // const handleCloseOffer = () => {
+  //   setShowOffer(false);
+  //   sessionStorage.setItem('offerPopupDismissed', 'true');
+  //   setPopupDismissed(true);
+  // };
 
-  const handleReopenOffer = () => {
-    setShowOffer(true);
-    // Optionally clear the dismissed flag so it can appear again on next visit if needed
-    // sessionStorage.removeItem('offerPopupDismissed');
-  };
+  // const handleReopenOffer = () => {
+  //   setShowOffer(true);
+  //   // Optionally clear the dismissed flag so it can appear again on next visit if needed
+  //   // sessionStorage.removeItem('offerPopupDismissed');
+  // };
   return (
-    <BrowserRouter>
+    <BrowserRouter future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}>
     {/* <MovingBackground /> */}
     <ParticleBackground />
     <ClickRipple />
@@ -133,6 +136,7 @@ function App() {
       <ChatBot />
       {/* <OfferTab onClick={handleReopenOffer} /> */}
       {/* <SpecialOfferPopup isOpen={showOffer} onClose={handleCloseOffer} /> */}
+      <CookieConsent />
        <Analytics />
     </BrowserRouter>
   );
