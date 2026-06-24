@@ -128,7 +128,7 @@ function App() {
     <ClickRipple />
       <ScrollProgress />
       <Navbar />
-      <main style={{ minHeight: '80vh' , position: 'relative', zIndex: 1}}>
+      <main style={{ minHeight: '80vh' }}>
         <AnimatedRoutes />
       </main>
       <Footer />
