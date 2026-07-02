@@ -280,3 +280,138 @@
 [data-theme='dark'] .statusDot {
   border-color: var(--bg-primary);
 }
+
+/* ═══════════════════════════════════════
+   Mobile Carousel
+   ═══════════════════════════════════════ */
+
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  position: relative;
+}
+
+.carouselWindow {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 20px;
+  touch-action: pan-y;
+}
+
+.carouselTrack {
+  display: flex;
+  width: 100%;
+}
+
+.carouselSlide {
+  flex: 0 0 100%;
+  padding: 0 var(--space-2);
+  box-sizing: border-box;
+}
+
+/* ===== Navigation Buttons ===== */
+.navBtn {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s;
+  box-shadow: var(--shadow);
+  z-index: 5;
+}
+
+.navBtn:hover:not(:disabled) {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  transform: scale(1.1);
+}
+
+.navBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* ===== Pagination Dots ===== */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+  flex-wrap: wrap;
+  padding: 0 var(--space-4);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0;
+}
+
+.dot:hover {
+  background: var(--text-muted);
+}
+
+.activeDot {
+  width: 24px;
+  border-radius: 4px;
+  background: var(--accent);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .carouselContainer {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .navBtn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .carouselSlide {
+    padding: 0 var(--space-1);
+  }
+}
+
+@media (max-width: 480px) {
+  .carouselContainer {
+    max-width: 320px;
+  }
+
+  .navBtn {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 380px) {
+  .carouselContainer {
+    max-width: 280px;
+    gap: 4px;
+  }
+
+  .navBtn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .navBtn svg {
+    width: 16px;
+    height: 16px;
+  }
+}

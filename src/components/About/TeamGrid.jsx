@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import styles from './TeamGrid.module.css';
 import ceomamImg from '../../assets/ceomam.png';
 import anajana from '../../assets/anjana itwari2.jpg';
 import raj from '../../assets/profileraj.png';
-// import ranjna from '../../assets/ranjanmam.jpg';
-import ranjna from  '../../../public/assets/ranjanmam.jpg';
+import ranjna from '../../../public/assets/ranjanmam.jpg';
 import aman from '../../assets/aman.png';
 import groupImg from '../../assets/groupImg.png';
 import nitin from '../../assets/nitin.jpeg';
@@ -21,39 +20,27 @@ const team = [
     role: 'Founder & CEO', 
     img: ceomamImg, 
     bio: 'Visionary leader with 5+ years in tech.',
-    linkedin: '#',
-    twitter: '#',
-    email: '#',
     color: '#0a66c2'
   },
-   { 
+  { 
     name: 'Ranjana Vishwakarma', 
-    role: 'co-Founder & CTO', 
+    role: 'Co-Founder & CTO', 
     img: ranjna, 
-    bio: 'co-founder of vardaan tech hub',
-    linkedin: '#',
-    twitter: '#',
-    email: '#',
+    bio: 'Co-founder of Vardaan Tech Hub',
     color: '#f97316'
   },
   { 
     name: 'Rajkumar Chourasiya', 
-    role: ' AI Developer', 
+    role: 'AI Developer', 
     img: raj, 
     bio: 'Specialist in LLMs and RAG systems.',
-    linkedin: '#',
-    twitter: '#',
-    email: '#',
     color: '#8b5cf6'
   },
   { 
     name: 'Anjana Tiwari', 
-    role: 'Senior frontend Developer', 
+    role: 'Senior Frontend Developer', 
     img: anajana, 
     bio: 'Driving product strategy and UX.',
-    linkedin: '#',
-    twitter: '#',
-    email: '#',
     color: '#ec4899'
   },
   { 
@@ -61,135 +48,139 @@ const team = [
     role: 'Senior Architect', 
     img: aman, 
     bio: 'Cloud and DevOps specialist.',
-    linkedin: '#',
-    twitter: '#',
-    email: '#',
     color: '#14b8a6'
   },
   { 
-    name: 'nitin goyal', 
-    role: 'Rag/llm devloper', 
+    name: 'Nitin Goyal', 
+    role: 'RAG/LLM Developer', 
     img: nitin, 
-    bio: 'Rag/llm devloper',
-    linkedin: '#',
-    twitter: '#',
-    email: '#',
+    bio: 'RAG/LLM Developer',
     color: '#ec4899'
-  },{ 
-    name: 'Mansi rajput', 
-    role: 'Python devloper', 
+  },
+  { 
+    name: 'Mansi Rajput', 
+    role: 'Python Developer', 
     img: Mansi, 
-    bio: 'Python devloper',
-    linkedin: '#',
-    twitter: '#',
-    email: '#',
+    bio: 'Python Developer',
     color: '#8b5cf6'
-  },{ 
-    name: 'Kalash vyash', 
-    role: '.net devloper', 
+  },
+  { 
+    name: 'Kalash Vyash', 
+    role: '.NET Developer', 
     img: Kalash, 
-    bio: '.net devloper',
-    linkedin: '#',
-    twitter: '#',
-    email: '#',
+    bio: '.NET Developer',
     color: '#f97316'
-  },{ 
+  },
+  { 
     name: 'Anushka Yadav', 
-    role: 'PHP larlavel devloper', 
+    role: 'PHP Laravel Developer', 
     img: anuska, 
-    bio: 'PHP larlavel devloper',
-    linkedin: '#',
-    twitter: '#',
-    email: '#',
+    bio: 'PHP Laravel Developer',
     color: '#0a66c2'
-  },{ 
-    name: 'Ahinsha suryavanshi', 
-    role: 'Java devloper', 
+  },
+  { 
+    name: 'Ahinsha Suryavanshi', 
+    role: 'Java Developer', 
     img: Ahinsha, 
-    bio: 'Java devloper',
-    linkedin: '#',
-    twitter: '#',
-    email: '#',
+    bio: 'Java Developer',
     color: '#14b8a6'
   },
- 
 ];
 
-// Floating particles for group image
 const FloatingParticle = ({ delay, left, size }) => (
   <motion.div
     className={styles.particle}
-    style={{
-      left: `${left}%`,
-      width: size,
-      height: size,
-    }}
-    animate={{
-      y: [0, -30, 0],
-      opacity: [0, 1, 0],
-      scale: [1, 1.5, 1],
-    }}
-    transition={{
-      repeat: Infinity,
-      duration: 3 + delay,
-      ease: 'easeInOut',
-      delay: delay,
-    }}
+    style={{ left: `${left}%`, width: size, height: size }}
+    animate={{ y: [0, -30, 0], opacity: [0, 1, 0], scale: [1, 1.5, 1] }}
+    transition={{ repeat: Infinity, duration: 3 + delay, ease: 'easeInOut', delay }}
   />
 );
 
+// Individual Team Card Component
+const TeamCard = ({ member, idx }) => (
+  <motion.div
+    className={styles.card}
+    initial={{ opacity: 0, y: 40, scale: 0.95 }}
+    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+    viewport={{ once: true }}
+    transition={{ delay: idx * 0.1, duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+    whileHover={{ y: -8, scale: 1.02 }}
+  >
+    <div className={styles.accentBar} style={{ background: `linear-gradient(135deg, ${member.color}, ${member.color}88)` }} />
+    
+    <motion.div 
+      className={styles.avatarWrapper}
+      whileHover={{ scale: 1.08 }}
+    >
+      <div className={styles.avatarGlow} style={{ boxShadow: `0 0 30px ${member.color}44` }} />
+      <img src={member.img} alt={member.name} className={styles.avatar} />
+      <motion.div className={styles.statusDot} animate={{ scale: [1, 1.3, 1] }} transition={{ repeat: Infinity, duration: 2 }} />
+    </motion.div>
+
+    <h3>{member.name}</h3>
+    <p className={styles.role} style={{ color: member.color }}>{member.role}</p>
+    <p className={styles.bio}>{member.bio}</p>
+  </motion.div>
+);
+
 const TeamGrid = () => {
-  // Staggered reveal for header
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const carouselRef = useRef(null);
+
+  // Check if mobile
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentIndex(prev => Math.min(prev + 1, team.length - 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex(prev => Math.max(prev - 1, 0));
+  };
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
+  // Touch swipe handlers
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) nextSlide();
+    if (isRightSwipe) prevSlide();
+
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
+
   const headerVariants = {
     hidden: { opacity: 0, y: -20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] }
-    }
-  };
-
-  // Card hover animation variants
-  const cardVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 40,
-      scale: 0.95
-    },
-    visible: (i) => ({
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        delay: i * 0.1,
-        duration: 0.5,
-        ease: [0.4, 0, 0.2, 1]
-      }
-    }),
-    hover: {
-      y: -12,
-      scale: 1.02,
-      transition: { duration: 0.3, ease: 'easeOut' }
-    }
-  };
-
-  // Avatar pulse on hover
-  const avatarVariants = {
-    rest: { scale: 1, rotate: 0 },
-    hover: { 
-      scale: 1.08, 
-      rotate: [0, -3, 3, 0],
-      transition: { 
-        rotate: { repeat: Infinity, duration: 2 },
-        scale: { duration: 0.3 }
-      }
-    }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] } }
   };
 
   return (
     <section className={styles.section}>
       <div className="container">
-        {/* Animated Section Header */}
+        {/* Section Header */}
         <motion.div 
           className={styles.header}
           variants={headerVariants}
@@ -222,7 +213,6 @@ const TeamGrid = () => {
           >
             The brilliant minds driving innovation at Vardaan tech hub
           </motion.p>
-          {/* Decorative line */}
           <motion.div 
             className={styles.divider}
             initial={{ width: 0 }}
@@ -232,7 +222,7 @@ const TeamGrid = () => {
           />
         </motion.div>
 
-        {/* Group Image with Particles */}
+        {/* Group Image */}
         <motion.div
           className={styles.groupImageWrapper}
           initial={{ opacity: 0, y: 30 }}
@@ -240,21 +230,13 @@ const TeamGrid = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <motion.div
-            className={styles.groupImage}
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.4 }}
-          >
+          <motion.div className={styles.groupImage} whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }}>
             <img src={groupImg} alt="Vardaan tech hub Team" />
-            
-            {/* Floating particles */}
             <FloatingParticle delay={0} left={10} size={8} />
             <FloatingParticle delay={1} left={30} size={6} />
             <FloatingParticle delay={2} left={50} size={10} />
             <FloatingParticle delay={0.5} left={70} size={7} />
             <FloatingParticle delay={1.5} left={90} size={9} />
-            
-            {/* Gradient overlay */}
             <div className={styles.groupOverlay}>
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
@@ -268,95 +250,72 @@ const TeamGrid = () => {
           </motion.div>
         </motion.div>
 
-        {/* Team Cards Grid */}
-        <div className={styles.grid}>
-          {team.map((member, idx) => (
-            <motion.div
-              key={idx}
-              className={styles.card}
-              custom={idx}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: '-50px' }}
-              whileHover="hover"
+        {/* Desktop Grid / Mobile Carousel */}
+        {isMobile ? (
+          <div className={styles.carouselContainer}>
+            {/* Previous Button */}
+            <button 
+              className={`${styles.navBtn} ${styles.prevBtn}`}
+              onClick={prevSlide}
+              disabled={currentIndex === 0}
+              aria-label="Previous member"
             >
-              {/* Top accent bar */}
-              <div 
-                className={styles.accentBar} 
-                style={{ background: `linear-gradient(135deg, ${member.color}, ${member.color}88)` }}
-              />
-              
-              {/* Avatar with ring glow */}
-              <motion.div 
-                className={styles.avatarWrapper}
-                variants={avatarVariants}
-                initial="rest"
-                whileHover="hover"
+              <FiChevronLeft size={22} />
+            </button>
+
+            {/* Carousel Window */}
+            <div 
+              className={styles.carouselWindow}
+              ref={carouselRef}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
+              <motion.div
+                className={styles.carouselTrack}
+                animate={{ x: `-${currentIndex * 100}%` }}
+                transition={{ type: 'spring', stiffness: 300, damping: 30 }}
               >
-                <div 
-                  className={styles.avatarGlow}
-                  style={{ boxShadow: `0 0 30px ${member.color}44` }}
-                />
-                <img src={member.img} alt={member.name} className={styles.avatar} />
-                {/* Status dot */}
-                <motion.div 
-                  className={styles.statusDot}
-                  animate={{ scale: [1, 1.3, 1] }}
-                  transition={{ repeat: Infinity, duration: 2 }}
-                />
+                {team.map((member, idx) => (
+                  <div key={idx} className={styles.carouselSlide}>
+                    <TeamCard member={member} idx={0} />
+                  </div>
+                ))}
               </motion.div>
+            </div>
 
-              {/* Content */}
-              <motion.h3
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 + idx * 0.1 }}
-              >
-                {member.name}
-              </motion.h3>
-              <p className={styles.role} style={{ color: member.color }}>
-                {member.role}
-              </p>
-              <p className={styles.bio}>{member.bio}</p>
+            {/* Next Button */}
+            <button 
+              className={`${styles.navBtn} ${styles.nextBtn}`}
+              onClick={nextSlide}
+              disabled={currentIndex === team.length - 1}
+              aria-label="Next member"
+            >
+              <FiChevronRight size={22} />
+            </button>
+          </div>
+        ) : (
+          /* Desktop Grid */
+          <div className={styles.grid}>
+            {team.map((member, idx) => (
+              <TeamCard key={idx} member={member} idx={idx} />
+            ))}
+          </div>
+        )}
 
-              {/* Social Icons */}
-              {/* <motion.div 
-                className={styles.social}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 + idx * 0.1 }}
-              > */}
-                {/* <motion.a 
-                  href={member.linkedin} 
-                  aria-label="LinkedIn"
-                  whileHover={{ scale: 1.2, backgroundColor: member.color, color: '#fff' }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <FiLinkedin />
-                </motion.a> */}
-                {/* <motion.a 
-                  href={member.twitter} 
-                  aria-label="Twitter"
-                  whileHover={{ scale: 1.2, backgroundColor: member.color, color: '#fff' }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <FiTwitter />
-                </motion.a> */}
-                {/* <motion.a 
-                  href={`mailto:${member.email}`} 
-                  aria-label="Email"
-                  whileHover={{ scale: 1.2, backgroundColor: member.color, color: '#fff' }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <FiMail />
-                </motion.a> */}
-              {/* </motion.div> */}
-            </motion.div>
-          ))}
-        </div>
+        {/* Pagination Dots (Mobile Only) */}
+        {isMobile && (
+          <div className={styles.dots}>
+            {team.map((_, idx) => (
+              <button
+                key={idx}
+                className={`${styles.dot} ${idx === currentIndex ? styles.activeDot : ''}`}
+                onClick={() => goToSlide(idx)}
+                aria-label={`Go to member ${idx + 1}`}
+              />
+            ))}
+          </div>
+        )}
 
         {/* Join Team CTA */}
         <motion.div
