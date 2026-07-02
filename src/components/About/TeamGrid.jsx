@@ -9,6 +9,11 @@ import raj from '../../assets/profileraj.png';
 import ranjna from  '../../../public/assets/ranjanmam.jpg';
 import aman from '../../assets/aman.png';
 import groupImg from '../../assets/groupImg.png';
+import nitin from '../../assets/nitin.jpeg';
+import Ahinsha from '../../assets/ahinsha.jpeg';
+import anuska from '../../assets/anuska.jpeg';
+import Kalash from '../../assets/kalash.jpeg';
+import Mansi from '../../assets/mansi.jpeg';
 
 const team = [
   { 
@@ -56,6 +61,52 @@ const team = [
     role: 'Senior Architect', 
     img: aman, 
     bio: 'Cloud and DevOps specialist.',
+    linkedin: '#',
+    twitter: '#',
+    email: '#',
+    color: '#14b8a6'
+  },
+  { 
+    name: 'nitin goyal', 
+    role: 'Rag/llm devloper', 
+    img: nitin, 
+    bio: 'Rag/llm devloper',
+    linkedin: '#',
+    twitter: '#',
+    email: '#',
+    color: '#ec4899'
+  },{ 
+    name: 'Mansi rajput', 
+    role: 'Python devloper', 
+    img: Mansi, 
+    bio: 'Python devloper',
+    linkedin: '#',
+    twitter: '#',
+    email: '#',
+    color: '#8b5cf6'
+  },{ 
+    name: 'Kalash vyash', 
+    role: '.net devloper', 
+    img: Kalash, 
+    bio: '.net devloper',
+    linkedin: '#',
+    twitter: '#',
+    email: '#',
+    color: '#f97316'
+  },{ 
+    name: 'Anushka Yadav', 
+    role: 'PHP larlavel devloper', 
+    img: anuska, 
+    bio: 'PHP larlavel devloper',
+    linkedin: '#',
+    twitter: '#',
+    email: '#',
+    color: '#0a66c2'
+  },{ 
+    name: 'Ahinsha suryavanshi', 
+    role: 'Java devloper', 
+    img: Ahinsha, 
+    bio: 'Java devloper',
     linkedin: '#',
     twitter: '#',
     email: '#',

@@ -13,11 +13,10 @@ const HomePage = () => {
   return (
     <>
     <PageSEO
-  title="Vardaan Tech Hub – AI Agents, Custom Chatbots & Software Development"
-  description="Vardaan Tech Hub is India's leading AI solutions company. We build intelligent AI agents, custom chatbots, web & mobile apps. Get a free demo consultation today. Trusted by 200+ clients worldwide."
+  title="Enterprise AI Solutions – AI Strategy, Development & Automation | Vardaan Tech Hub"
+  description="Transform your business with complete AI solutions. From AI strategy consulting to custom AI agents, predictive analytics, and intelligent automation. 200+ projects delivered. 40% average cost reduction for clients. Book a free consultation."
   path="/"
-  keywords="AI agent development, custom chatbot, web development, mobile app development, AI solutions India, software company Indore, Vardaan Tech Hub"
-  schema={{ ...organizationSchema, ...websiteSchema }}
+  keywords="enterprise AI solutions, AI development company, AI strategy consulting, custom AI agents, intelligent automation, predictive analytics, AI deployment, machine learning solutions, AI integration services, digital transformation"
 />
       <Hero />
       <TechStackSlider />
