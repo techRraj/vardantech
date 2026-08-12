@@ -7,16 +7,8 @@ import anajana from '../../assets/anjana itwari2.jpg';
 import raj from '../../assets/profileraj.png';
 import ranjna from '../../../public/assets/ranjanmam.jpg';
 import aman from '../../assets/aman.png';
-import groupImg from '../../assets/groupImg.png';
-import nitin from '../../assets/nitin.jpeg';
-// import Ahinsha from '../../assets/ahinsha.jpeg';
-import anuska from '../../assets/anuska.jpeg';
-import Kalash from '../../assets/kalash.jpeg';
-import Mansi from '../../assets/mansi.jpeg';
-import megha from '../../assets/megha.jpeg';
-import namami from '../../assets/namami.jpeg';
-import sneha from '../../assets/sneha.jpeg';
-import Ahinsha from '../../assets/ahinshaS.jpeg';
+import groupImg from '../../assets/groupVardaan.jpeg';
+
 const team = [
   { 
     name: 'Mrs. Mini Chauhan', 
@@ -53,60 +45,7 @@ const team = [
     bio: 'Cloud and DevOps specialist.',
     color: '#14b8a6'
   },
-  { 
-    name: 'Akash sharma', 
-    role: 'RAG/LLM Developer', 
-    img: nitin, 
-    bio: 'RAG/LLM Developer',
-    color: '#ec4899'
-  },
-  { 
-    name: 'Mansi Mutkule', 
-    role: 'Python Developer', 
-    img: Mansi, 
-    bio: 'Python Developer',
-    color: '#8b5cf6'
-  },
-  { 
-    name: 'Kalash Mourya', 
-    role: '.NET Developer', 
-    img: Kalash, 
-    bio: '.NET Developer',
-    color: '#f97316'
-  },
-  { 
-    name: 'Gracyy', 
-    role: 'PHP Laravel Developer', 
-    img: anuska, 
-    bio: 'PHP Laravel Developer',
-    color: '#0a66c2'
-  },
-  { 
-    name: 'Ahinsa Suryavanshi', 
-    role: 'Human Resource Manager', 
-    img: Ahinsha, 
-    bio: 'Human Resource Manager',
-    color: '#14b8a6'
-  },
-  { 
-    name: 'Namami Malakar', 
-    role: 'Android Developer', 
-    img: namami, 
-    bio: 'Create powerful and user-friendly Android applications.',
-    color: '#14b8a6'
-  },{ 
-    name: 'Megha Thakur', 
-    role: 'Graphic Designer', 
-    img: megha, 
-    bio: 'graphic designer with a passion for creating visually compelling designs.',
-    color: '#14b8a6'
-  },{ 
-    name: ' Sneha Sharma', 
-    role: 'Java Developer', 
-    img: sneha, 
-    bio: 'Java Developer with security expertise.',
-    color: '#14b8a6'
-  },
+  
 ];
 
 const FloatingParticle = ({ delay, left, size }) => (

@@ -76,6 +76,17 @@
   font-size: 32px;
   color: var(--accent);
   margin-bottom: var(--space-3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.trustIcon svg {
+  color: var(--accent);
+  width: 32px;
+  height: 32px;
+  stroke-width: 2;
 }
 
 .trustCard h4 {
@@ -108,6 +119,13 @@
   overflow: hidden;
   margin-bottom: var(--space-5);
   mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
     black 10%,
@@ -340,4 +358,8 @@
 [data-theme='dark'] .partnerCard:hover .partnerLogo img,
 [data-theme='dark'] .partnerCardSmall:hover img {
   filter: brightness(1);
+}
+
+[data-theme='dark'] .trustIcon svg {
+  color: var(--accent);
 }

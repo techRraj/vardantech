@@ -9,6 +9,8 @@ import FreeDemoBanner from '../components/Home/FreeDemoBanner';
 import PageSEO from '../components/SEO/PageSEO';
 import{websiteSchema,organizationSchema} from '../utils/schema';
 import Partners from '../components/Home/Partners';
+import DeviceShowcase from '../components/Home/DeviceShowcase';
+import TrustBadges from '../components/Home/TrustBadges';
 const HomePage = () => {
   return (
     <>
@@ -19,10 +21,12 @@ const HomePage = () => {
   keywords="enterprise AI solutions, AI development company, AI strategy consulting, custom AI agents, intelligent automation, predictive analytics, AI deployment, machine learning solutions, AI integration services, digital transformation"
 />
       <Hero />
+      <TrustBadges />
       <TechStackSlider />
       <ServicesHighlight />
       <WhyChooseUs />
-      <Partners />
+      {/* <Partners /> */}
+       <DeviceShowcase /> 
       <FounderSpotlight />
       <ClientFeedback />
       <FreeDemoBanner />

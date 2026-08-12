@@ -48,7 +48,7 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
           <a href="#" aria-label="Twitter"><FiTwitter size={22} /></a>
           <a href="#" aria-label="Facebook"><FiFacebook size={22} /></a>
         </div> */}
-        <p className={styles.copyright}>© 2024 Vardaan tech hub</p>
+        <p className={styles.copyright}>© 2026 Vardaan tech hub</p>
       </div>
     </motion.aside>
   );

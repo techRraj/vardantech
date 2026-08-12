@@ -72,10 +72,10 @@ const clientLogos = [
 ];
 
 const trustBadges = [
-  { icon: <FiStar />, label: '4.9/5 Rating', desc: '150+ Reviews' },
-  { icon: <FiAward />, label: '15+ Awards', desc: 'Industry Recognition' },
-  { icon: <FiShield />, label: '100% Secure', desc: 'GDPR Compliant' },
-  { icon: <FiTrendingUp />, label: '200+ Projects', desc: 'Successfully Delivered' },
+  { icon: FiStar, label: '4.9/5 Rating', desc: '150+ Reviews' },
+  { icon: FiAward, label: '15+ Awards', desc: 'Industry Recognition' },
+  { icon: FiShield, label: '100% Secure', desc: 'GDPR Compliant' },
+  { icon: FiTrendingUp, label: '200+ Projects', desc: 'Successfully Delivered' },
 ];
 
 const Partners = () => {
@@ -114,18 +114,23 @@ const Partners = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          {trustBadges.map((badge, idx) => (
-            <motion.div
-              key={idx}
-              className={styles.trustCard}
-              whileHover={{ y: -6, scale: 1.02 }}
-              transition={{ type: 'spring', stiffness: 300 }}
-            >
-              <div className={styles.trustIcon}>{badge.icon}</div>
-              <h4>{badge.label}</h4>
-              <p>{badge.desc}</p>
-            </motion.div>
-          ))}
+          {trustBadges.map((badge, idx) => {
+            const IconComponent = badge.icon;
+            return (
+              <motion.div
+                key={idx}
+                className={styles.trustCard}
+                whileHover={{ y: -6, scale: 1.02 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+              >
+                <div className={styles.trustIcon}>
+                  <IconComponent size={32} />
+                </div>
+                <h4>{badge.label}</h4>
+                <p>{badge.desc}</p>
+              </motion.div>
+            );
+          })}
         </motion.div>
 
         {/* Technology Partners - 3D Carousel */}

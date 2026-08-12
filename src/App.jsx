@@ -29,7 +29,19 @@ const ContactPage = lazy(() => import('./pages/ContactPage'));
 const BlogPostPage = lazy(() => import('./components/Blog/BlogPostPage'));
 const FreeAudit = lazy(() => import('./pages/FreeAudit'));
 const PrivacyPage =lazy(()=> import('./pages/PrivacyPage'));
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant' // Use 'instant' for immediate scroll, 'smooth' for animation
+    });
+  }, [pathname]);
+
+  return null;
+};
 // 3D page transition variants
 const pageVariants = {
   initial: { 
@@ -124,6 +136,8 @@ function App() {
         v7_relativeSplatPath: true,
       }}>
     {/* <MovingBackground /> */}
+    
+<ScrollToTop />
     <ParticleBackground />
     <ClickRipple />
       <ScrollProgress />

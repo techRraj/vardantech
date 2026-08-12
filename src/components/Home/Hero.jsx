@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-
 import { 
   FiTrendingUp, 
   FiCpu, 
@@ -10,13 +9,15 @@ import {
   FiCloud, 
   FiShield,
   FiArrowRight,
-  FiCheckCircle
+  FiCheckCircle,
+  FiStar,
+  FiUsers,
+  FiGlobe
 } from 'react-icons/fi';
 import Button from '../UI/Button';
-// import Button from '../UI/Button';
 import styles from './Hero.module.css';
 import aiImage from '../../assets/ai.png';
-import logoImage from '../../assets/logo3.png'
+import logoImage from '../../assets/logo3.png';
 
 const highlights = [
   { icon: <FiTrendingUp />, label: 'Strategy & Consulting' },
@@ -27,6 +28,11 @@ const highlights = [
   { icon: <FiShield />, label: 'Enterprise Security' },
 ];
 
+const trustData = [
+  { icon: <FiStar />, value: '4.9/5', label: 'Client Rating' },
+  { icon: <FiUsers />, value: '200+', label: 'Projects Done' },
+  { icon: <FiGlobe />, value: '15+', label: 'Countries' },
+];
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -38,24 +44,34 @@ const Hero = () => {
 
   return (
     <section className={styles.hero}>
+      {/* Background Decorative Elements */}
+      <div className={styles.bgGlow1} />
+      <div className={styles.bgGlow2} />
+      <div className={styles.bgGrid} />
+
       <div className={`container ${styles.heroContainer}`}>
+        {/* Left Content */}
         <motion.div
           className={styles.content}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
         >
-          {/* Premium Badge */}
-          <motion.span 
-            className={styles.badge}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
+          {/* Badge */}
+          <motion.div 
+            className={styles.badgeWrapper}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
           >
-            <FiCheckCircle style={{ marginRight: 6 }} />
-            Enterprise AI Solutions
-          </motion.span>
+            <span className={styles.badge}>
+              <FiCheckCircle />
+              Enterprise AI Solutions
+            </span>
+            <span className={styles.badgeSub}>Trusted by 200+ companies worldwide</span>
+          </motion.div>
 
+          {/* Title */}
           <h1 className={styles.title}>
             Transform Your Business With{' '}
             <span className={styles.highlightWrapper}>
@@ -69,31 +85,46 @@ const Hero = () => {
             </span>
           </h1>
 
+          {/* Description */}
           <p className={styles.subtitle}>
-            From <strong>AI strategy consulting</strong> to <strong>custom model development</strong>,{' '}
-            <strong>intelligent automation</strong>, and <strong>full-scale deployment</strong> — 
-            we build complete AI ecosystems that drive revenue, reduce costs, and give you an unfair competitive advantage.
+            We build complete AI ecosystems — from{' '}
+            <strong>strategy</strong> to{' '}
+            <strong>development</strong> to{' '}
+            <strong>deployment</strong> — 
+            that drive revenue, reduce costs, and give you an unfair advantage.
           </p>
 
-          {/* Key Highlights with Professional Icons */}
-          <div className={styles.highlights}>
+          {/* Service Pills */}
+          <motion.div 
+            className={styles.highlights}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+          >
             {highlights.map((item, idx) => (
               <motion.span
                 key={idx}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 + idx * 0.05 }}
+                className={styles.pill}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.5 + idx * 0.06 }}
+                whileHover={{ scale: 1.05, y: -2 }}
               >
-                <span className={styles.highlightIcon}>{item.icon}</span>
+                <span className={styles.pillIcon}>{item.icon}</span>
                 {item.label}
               </motion.span>
             ))}
-          </div>
+          </motion.div>
 
-          <div className={styles.ctaGroup}>
-            <Button
-              variant="primary"
-              size="lg"
+          {/* CTA Buttons */}
+          <motion.div 
+            className={styles.ctaGroup}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+          >
+            <button
+              className={styles.primaryBtn}
               onClick={() => {
                 const phone = '918889710105';
                 const message = encodeURIComponent(
@@ -102,83 +133,102 @@ const Hero = () => {
                 window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
               }}
             >
-              Book a Free AI Consultation
-              <FiArrowRight style={{ marginLeft: 6 }} />
-            </Button>
-            <Button variant="secondary" size="lg" onClick={() => navigate('/services')}>
-              Explore AI Solutions
-            </Button>
-          </div>
+              <span>Book a Free AI Consultation</span>
+              <FiArrowRight className={styles.btnIcon} />
+            </button>
+            <button
+              className={styles.secondaryBtn}
+              onClick={() => navigate('/services')}
+            >
+              <span>Explore AI Solutions</span>
+              <FiArrowRight className={styles.btnIcon} />
+            </button>
+          </motion.div>
 
-          {/* Trust Indicators */}
-          {/* <motion.div 
-            className={styles.trustIndicators}
+          {/* Trust Bar */}
+          <motion.div 
+            className={styles.trustBar}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
+            transition={{ delay: 0.9 }}
           >
-            <div className={styles.trustItem}>
-              <span>⭐ 4.9/5</span>
-              <span className={styles.trustLabel}>Client Rating</span>
-            </div>
-            <div className={styles.trustItem}>
-              <span>🏆 200+</span>
-              <span className={styles.trustLabel}>AI Projects</span>
-            </div>
-            <div className={styles.trustItem}>
-              <span>🌍 15+</span>
-              <span className={styles.trustLabel}>Countries</span>
-            </div>
-            <div className={styles.trustItem}>
-              <span>💰 40%</span>
-              <span className={styles.trustLabel}>Avg Cost Reduction</span>
-            </div>
-          </motion.div> */}
+            {trustData.map((item, idx) => (
+              <div key={idx} className={styles.trustItem}>
+                <span className={styles.trustIcon}>{item.icon}</span>
+                <div>
+                  <span className={styles.trustValue}>{item.value}</span>
+                  <span className={styles.trustLabel}>{item.label}</span>
+                </div>
+              </div>
+            ))}
+          </motion.div>
         </motion.div>
 
-        {/* Flip Card */}
+        {/* Right Visual - Flip Card */}
         <motion.div
-          className={styles.flipCard}
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          onClick={handleTap}
-          role="button"
-          tabIndex={0}
-          onKeyPress={(e) => e.key === 'Enter' && handleTap()}
-          aria-label="Tap to see company details"
-          whileHover={{ scale: 1.05 }}
+          className={styles.visualArea}
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
         >
-          <motion.div
-            className={styles.flipCardInner}
-            animate={{ rotateY: isFlipped ? 180 : 0 }}
-            transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+          <div
+            className={styles.flipCard}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onClick={handleTap}
+            role="button"
+            tabIndex={0}
+            onKeyPress={(e) => e.key === 'Enter' && handleTap()}
+            aria-label="Tap to see company logo"
           >
-            <div className={styles.flipCardFront}>
-              <img src={aiImage} alt="Enterprise AI Solutions" />
-              <div className={styles.flipHint}>
-                <FiArrowRight className={styles.hintIcon} />
-                <span>Click to explore</span>
+            <motion.div
+              className={styles.flipCardInner}
+              animate={{ rotateY: isFlipped ? 180 : 0 }}
+              transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+            >
+              {/* Front */}
+              <div className={styles.flipCardFront}>
+                <img src={aiImage} alt="Enterprise AI Solutions" className={styles.frontImage} />
+                <div className={styles.frontOverlay} />
+                <div className={styles.flipHint}>
+                  <span>Click to explore</span>
+                  <FiArrowRight />
+                </div>
               </div>
-            </div>
-            <div className={styles.flipCardBack}>
-              <motion.div 
-                className={styles.backContent}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: isFlipped ? 1 : 0 }}
-                transition={{ delay: 0.2, duration: 0.3 }}
-              >
-                <img src={logoImage} alt="Vardaan Tech Hub" className={styles.logoImage} />
-              </motion.div>
-            </div>
+
+              {/* Back */}
+              <div className={styles.flipCardBack}>
+                <motion.div 
+                  className={styles.backContent}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: isFlipped ? 1 : 0 }}
+                  transition={{ delay: 0.3, duration: 0.3 }}
+                >
+                  <img src={logoImage} alt="Vardaan Tech Hub" className={styles.logoImage} />
+                </motion.div>
+                <div className={styles.backPattern} />
+              </div>
+            </motion.div>
+
+            {/* Glow ring */}
+            <div className={`${styles.glowRing} ${isFlipped ? styles.glowActive : ''}`} />
+          </div>
+
+          {/* Floating elements */}
+          {/* <motion.div 
+            className={styles.floatEl1}
+            animate={{ y: [0, -15, 0] }}
+            transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
+          >
+            <FiCpu />
           </motion.div>
-          <motion.div
-            className={styles.flipGlow}
-            animate={{ opacity: isFlipped ? 1 : 0, scale: isFlipped ? 1.1 : 0.9 }}
-            transition={{ duration: 0.4 }}
-          />
+          <motion.div 
+            className={styles.floatEl2}
+            animate={{ y: [0, 15, 0] }}
+            transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut', delay: 0.5 }}
+          >
+            <FiShield />
+          </motion.div> */}
         </motion.div>
       </div>
     </section>

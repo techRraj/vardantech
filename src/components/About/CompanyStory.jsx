@@ -15,11 +15,10 @@ const CompanyStory = () => {
           <span className={styles.label}>Our Story</span>
           <h1>Building Tomorrow's Technology, Today</h1>
           <p>
-            Founded in 2018, Vardaantechhub began with a simple mission: to make advanced AI and software development accessible to businesses of all sizes. 
-            What started as a two-person team has grown into a global technology partner trusted by startups and Fortune 500 companies alike.
+           Vardaan tech hub was founded with a bold mission: to empower businesses by making advanced AI, modern web design, and scalable software development accessible to every ambitious brand.
           </p>
           <p>
-            We've delivered over 150 successful projects, helping clients automate workflows, enhance customer experiences, and unlock new revenue streams through intelligent solutions.
+            As a nimble, next-generation technology partner, we combine cut-throat speed, modern design principles, and cutting-edge tech stacks (React, TypeScript, Node.js, and AI integrations) to turn complex ideas into high-converting digital products. From slick e-commerce platforms to intelligent web apps, we help startups and growing businesses automate workflows, elevate brand presence, and scale seamlessly.
           </p>
         </motion.div>
         <motion.div

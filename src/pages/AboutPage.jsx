@@ -4,8 +4,8 @@ import Breadcrumbs from '../components/Layout/Breadcrumbs';
 import CompanyStory from '../components/About/CompanyStory';
 import MissionVision from '../components/About/MissionVision';
 import TeamGrid from '../components/About/TeamGrid';
-import Milestones from '../components/About/Milestones';
-import Certifications from '../components/About/Certifications';
+// import Milestones from '../components/About/Milestones';
+// import Certifications from '../components/About/Certifications';
 import StatsCounter from '../components/About/StatsCounter';
 import styles from './AboutPage.module.css';
 // import PageSEO from '../components/SEO/PageSEO';
@@ -33,7 +33,7 @@ const AboutPage = () => {
       <section className={styles.heroBanner}>
         <div className={styles.heroOverlay} />
         <img 
-          src='/src/assets/groupImg.png' 
+          src='/src/assets/groupVardaan.jpeg' 
           alt="Vardaan Tech Hub Team" 
           className={styles.heroImage}
         />
@@ -48,8 +48,8 @@ const AboutPage = () => {
       <CompanyStory />
       <MissionVision />
       <TeamGrid />
-      <Milestones />
-      <Certifications />
+      {/* <Milestones /> */}
+      {/* <Certifications /> */}
     </>
   );
 };

@@ -1,0 +1,60 @@
+.section { padding: 60px 0; }
+.header { text-align: center; margin-bottom: 40px; }
+.badge { display: inline-flex; align-items: center; background: linear-gradient(135deg, rgba(10,102,194,0.1), rgba(139,92,246,0.1)); border: 1px solid rgba(10,102,194,0.25); color: var(--accent); padding: 7px 18px; border-radius: 30px; font-size: 0.85rem; font-weight: 700; margin-bottom: 16px; }
+.header h2 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+.header p { color: var(--text-secondary); }
+.divider { height: 4px; background: linear-gradient(90deg, var(--accent), #8b5cf6); border-radius: 2px; margin: 20px auto 0; }
+
+/* Desktop */
+.desktopLayout { display: flex; align-items: flex-end; justify-content: center; gap: 40px; flex-wrap: wrap; padding: 20px 0; }
+.deviceColumn { flex-shrink: 0; }
+.deviceWrapper { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+
+/* Phone */
+.phoneFrame { width: 150px; height: 280px; background: #1a1a2e; border-radius: 24px; padding: 8px; position: relative; box-shadow: 0 0 0 2px #2a2a3e, 0 0 0 4px #1a1a2e, 0 15px 40px rgba(0,0,0,0.3); }
+.phoneNotch { width: 40px; height: 14px; background: #1a1a2e; border-radius: 0 0 10px 10px; position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 2; }
+.phoneButton { width: 24px; height: 3px; background: #2a2a3e; border-radius: 2px; position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%); }
+.phoneScreen { width: 100%; height: 100%; border-radius: 18px; overflow: hidden; background: #fff; position: relative; }
+
+/* Tablet */
+.tabletFrame { width: 240px; height: 340px; background: #1a1a2e; border-radius: 16px; padding: 10px; position: relative; box-shadow: 0 0 0 2px #2a2a3e, 0 0 0 4px #1a1a2e, 0 15px 40px rgba(0,0,0,0.3); }
+.tabletCamera { width: 6px; height: 6px; background: #2a2a3e; border-radius: 50%; position: absolute; top: 8px; left: 50%; transform: translateX(-50%); z-index: 2; }
+.tabletHome { width: 40px; height: 3px; background: #2a2a3e; border-radius: 2px; position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%); }
+.tabletScreen { width: 100%; height: 100%; border-radius: 10px; overflow: hidden; background: #fff; position: relative; }
+
+/* Monitor */
+.monitorFrame { width: 400px; background: #1a1a2e; border-radius: 10px 10px 0 0; padding: 14px; position: relative; box-shadow: 0 0 0 2px #2a2a3e, 0 0 0 4px #1a1a2e; }
+.monitorCamera { width: 5px; height: 5px; background: #2a2a3e; border-radius: 50%; position: absolute; top: 5px; left: 50%; transform: translateX(-50%); z-index: 2; }
+.monitorScreen { width: 100%; height: 240px; border-radius: 3px; overflow: hidden; background: #fff; position: relative; }
+.monitorStand { width: 100px; height: 40px; background: #1a1a2e; margin: 0 auto; border-radius: 0 0 8px 8px; }
+.monitorBase { width: 160px; height: 8px; background: #2a2a3e; margin: 0 auto; border-radius: 4px; }
+
+/* Iframe */
+.iframeScaler { transform-origin: top left; overflow: hidden; position: absolute; top: 0; left: 0; }
+
+/* Device Label */
+.deviceLabel { display: flex; align-items: center; gap: 6px; color: var(--text-muted); font-size: 0.85rem; font-weight: 600; padding: 8px 16px; background: var(--bg-secondary); border-radius: 20px; border: 1px solid var(--border); }
+
+/* Mobile */
+.mobileLayout { display: none; }
+.mobileCarousel { display: flex; align-items: center; gap: 8px; justify-content: center; }
+.carouselWindow { flex: 1; max-width: 320px; overflow: hidden; }
+.carouselSlide { width: 100%; }
+.deviceCard { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.deviceInfo { text-align: center; }
+.deviceType { display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg, rgba(10,102,194,0.1), rgba(139,92,246,0.1)); color: var(--accent); padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; margin-bottom: 8px; }
+.deviceInfo p { color: var(--text-secondary); font-size: 0.85rem; }
+.navBtn { width: 40px; height: 40px; border-radius: 50%; background: var(--card-bg); border: 1px solid var(--border); color: var(--text-primary); display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; box-shadow: var(--shadow); }
+.navBtn:hover { background: var(--accent); color: white; }
+.dots { display: flex; justify-content: center; gap: 8px; margin-top: 20px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); border: none; cursor: pointer; padding: 0; }
+.activeDot { width: 24px; border-radius: 4px; background: var(--accent); }
+
+@media (max-width: 768px) {
+  .desktopLayout { display: none; }
+  .mobileLayout { display: block; }
+}
+@media (max-width: 400px) {
+  .carouselWindow { max-width: 260px; }
+  .navBtn { width: 34px; height: 34px; }
+}

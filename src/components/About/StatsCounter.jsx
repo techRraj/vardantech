@@ -4,10 +4,10 @@ import { FiUsers, FiAward, FiCode, FiGlobe } from 'react-icons/fi';
 import styles from './StatsCounter.module.css';
 
 const stats = [
-  { icon: <FiUsers />, value: 150, suffix: '+', label: 'Happy Clients' },
-  { icon: <FiCode />, value: 200, suffix: '+', label: 'Projects Delivered' },
-  { icon: <FiAward />, value: 15, suffix: '+', label: 'Years Experience' },
-  { icon: <FiGlobe />, value: 10, suffix: '+', label: 'Countries Served' },
+  { icon: <FiUsers />, value: 10, suffix: '+', label: 'Happy Clients' },
+  { icon: <FiCode />, value: 10, suffix: '+', label: 'Projects Delivered' },
+  { icon: <FiAward />, value: 10, suffix: '+', label: 'Years Experience' },
+  { icon: <FiGlobe />, value: 1, suffix: '+', label: 'Countries Served' },
 ];
 
 const CountUp = ({ target }) => {
